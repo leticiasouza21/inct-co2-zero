@@ -1,0 +1,857 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Conheça a pesquisa do INCT CO₂ Zero sobre valorização de biomassas agroindustriais, conversão termoquímica, carbono ativado e economia circular.">
+
+  <title>Valorização de Biomassas | INCT CO₂ Zero</title>
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/projeto-detalhe.css">
+
+  <!-- VISUAL PRÓPRIO DO PROJETO -->
+
+  <style>
+
+    .biomassa-visual {
+      min-height: 275px;
+      padding: 28px;
+      border-radius: 8px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(129, 195, 99, .30),
+          transparent 48%
+        ),
+        linear-gradient(
+          135deg,
+          #10283a,
+          #175b42
+        );
+
+      color: #fff;
+    }
+
+    .biomassa-topo {
+      color: #b7e9c8;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .biomassa-processo {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .biomassa-etapa {
+      min-height: 92px;
+      padding: 14px 9px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .biomassa-etapa strong {
+      font-family: 'Manrope', sans-serif;
+      color: #fff;
+      font-size: 17px;
+    }
+
+    .biomassa-etapa span {
+      color: #cee8d9;
+      font-size: 10px;
+      line-height: 1.4;
+    }
+
+    .biomassa-seta {
+      color: #91e5b5;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .biomassa-rodape {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      color: #b6e2cc;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .7px;
+    }
+
+    @media (max-width: 600px) {
+
+      .biomassa-visual {
+        min-height: 220px;
+        padding: 18px;
+      }
+
+      .biomassa-processo {
+        gap: 5px;
+      }
+
+      .biomassa-etapa {
+        min-height: 80px;
+        padding: 10px 5px;
+      }
+
+      .biomassa-etapa strong {
+        font-size: 12px;
+      }
+
+      .biomassa-etapa span {
+        font-size: 9px;
+      }
+
+      .biomassa-seta {
+        font-size: 15px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =====================================
+       CABEÇALHO PADRÃO
+  ====================================== -->
+
+  <header class="site-header">
+
+    <div class="container header-content">
+
+      <a href="../index.html"
+         class="logo"
+         aria-label="Página inicial do INCT CO2 Zero">
+
+        <img
+          src="../assets/img/logo-inct.svg"
+          alt="Logo INCT CO2 Zero">
+
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="menu"
+        aria-expanded="false">
+        ☰
+      </button>
+
+      
+<nav id="menu"
+     class="main-nav"
+     aria-label="Navegação principal">
+
+  <a href="../index.html">
+    Início
+  </a>
+
+  <a href="instituto.html">
+    O Instituto
+  </a>
+
+  <a href="atuacao.html">
+    Atuação
+  </a>
+
+  <!-- MENU SUSPENSO DE PROJETOS -->
+
+  <div class="nav-dropdown">
+
+    <div class="nav-dropdown-topo">
+
+      <a href="projetos.html"
+         class="nav-projetos-link">
+        Projetos
+      </a>
+
+      <button
+        type="button"
+        class="nav-dropdown-toggle"
+        aria-label="Mostrar opções de projetos"
+        aria-expanded="false"
+        aria-controls="submenu-projetos">
+        <span aria-hidden="true">⌄</span>
+      </button>
+
+    </div>
+
+    <div class="nav-dropdown-menu"
+         id="submenu-projetos">
+
+      <a href="todos-projetos.html">
+        Portfólio de Projetos
+        <span aria-hidden="true">↗</span>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- FIM DO MENU DE PROJETOS -->
+
+  <a href="nit.html">
+    NIT
+  </a>
+
+  <a href="../index.html#contato"
+     class="header-button">
+    Contato ↗
+  </a>
+
+</nav>
+
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =====================================
+         01 - APRESENTAÇÃO DO PROJETO
+    ====================================== -->
+
+    <section class="detalhe-hero">
+
+      <div class="container">
+
+        <a href="todos-projetos.html"
+           class="detalhe-voltar">
+          ← Todos os projetos
+        </a>
+
+        <div class="detalhe-hero-grid">
+
+          <div class="detalhe-hero-texto">
+
+            <span class="detalhe-etiqueta">
+              PROJETO DE TECNOLOGIA AMBIENTAL
+            </span>
+
+            <h1>
+              Valorização de
+              <em>Biomassas Agroindustriais.</em>
+            </h1>
+
+            <p class="detalhe-local">
+              Bioeconomia · Pesquisa e inovação
+            </p>
+
+            <p class="detalhe-resumo">
+              O projeto de Valorização
+              de Biomassas Agroindustriais
+              investiga soluções tecnológicas
+              para transformar resíduos
+              gerados por atividades agrícolas
+              e industriais em materiais
+              com novas possibilidades
+              de utilização.
+            </p>
+
+            <p class="detalhe-resumo">
+              A iniciativa utiliza princípios
+              da economia circular e processos
+              de conversão termoquímica
+              para estudar a produção
+              de materiais carbonáceos,
+              como o carbono ativado,
+              e outros bioprodutos
+              de interesse ambiental
+              e industrial.
+            </p>
+
+          </div>
+
+
+          <!-- PAINEL ILUSTRATIVO -->
+
+          <div class="biomassa-visual"
+               role="img"
+               aria-label="Ilustração das etapas: biomassa, conversão termoquímica e novos materiais">
+
+            <div class="biomassa-topo">
+              INCT CO₂ ZERO / BIOECONOMIA
+            </div>
+
+            <div class="biomassa-processo">
+
+              <div class="biomassa-etapa">
+                <strong>01</strong>
+                <span>BIOMASSA</span>
+              </div>
+
+              <span class="biomassa-seta">→</span>
+
+              <div class="biomassa-etapa">
+                <strong>02</strong>
+                <span>CONVERSÃO</span>
+              </div>
+
+              <span class="biomassa-seta">→</span>
+
+              <div class="biomassa-etapa">
+                <strong>03</strong>
+                <span>NOVOS MATERIAIS</span>
+              </div>
+
+            </div>
+
+            <div class="biomassa-rodape">
+
+              <span>
+                APROVEITAMENTO DE RESÍDUOS
+              </span>
+
+              <span>
+                ECONOMIA CIRCULAR
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- DESTAQUES DA PESQUISA -->
+
+        <div class="detalhe-indicadores">
+
+          <div class="detalhe-indicador">
+
+            <strong>Bio</strong>
+
+            <span>
+              Aproveitamento de
+              biomassas agroindustriais
+            </span>
+
+          </div>
+
+          <div class="detalhe-indicador">
+
+            <strong>CO₂</strong>
+
+            <span>
+              Pesquisa alinhada
+              à sustentabilidade
+              e à gestão de carbono
+            </span>
+
+          </div>
+
+          <div class="detalhe-indicador">
+
+            <strong>P&amp;D</strong>
+
+            <span>
+              Pesquisa e desenvolvimento
+              de novos materiais
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         02 - CONTEXTO E ATUAÇÃO
+    ====================================== -->
+
+    <section class="detalhe-secao"
+             id="contexto">
+
+      <div class="container detalhe-duas-colunas">
+
+        <div>
+
+          <span class="detalhe-etiqueta">
+            01 / CONTEXTO E ATUAÇÃO
+          </span>
+
+          <h2>
+            Transformar resíduos
+            em novas
+            <em>oportunidades.</em>
+          </h2>
+
+          <div class="detalhe-destaque-texto">
+            Aproveitar o potencial
+            da biomassa, reduzir desperdícios
+            e desenvolver materiais
+            de interesse ambiental
+            e industrial.
+          </div>
+
+        </div>
+
+
+        <div class="detalhe-texto">
+
+          <h3>
+            O desafio dos resíduos agroindustriais
+          </h3>
+
+          <p>
+            As atividades agrícolas
+            e agroindustriais produzem
+            grandes quantidades de resíduos
+            orgânicos, como cascas,
+            fibras, bagaços e outros
+            subprodutos do processamento
+            de matérias-primas vegetais.
+          </p>
+
+          <p>
+            Quando não recebem destinação
+            adequada, esses materiais
+            podem representar um problema
+            ambiental. A queima a céu aberto,
+            por exemplo, libera poluentes
+            atmosféricos e desperdiça
+            recursos que poderiam
+            ser aproveitados em
+            novos processos produtivos.
+          </p>
+
+          <p>
+            Muitas dessas biomassas
+            são compostas por estruturas
+            lignocelulósicas, ricas
+            em componentes vegetais
+            que podem ser transformados
+            por diferentes processos
+            físicos e químicos.
+            Essa característica
+            abre oportunidades para
+            a produção de novos materiais
+            e para a agregação de valor
+            a resíduos agroindustriais.
+          </p>
+
+
+          <h3>
+            A atuação do INCT CO₂ Zero
+          </h3>
+
+          <p>
+            O INCT CO₂ Zero desenvolve
+            pesquisas sobre rotas
+            de conversão termoquímica
+            capazes de transformar
+            resíduos agroindustriais
+            em produtos de maior
+            valor agregado.
+          </p>
+
+          <p>
+            Entre os materiais de interesse
+            está o carbono ativado,
+            conhecido por sua estrutura
+            porosa e pela capacidade
+            de adsorver determinadas
+            substâncias, característica
+            importante para aplicações
+            em processos de tratamento
+            ambiental.
+          </p>
+
+          <p>
+            A pesquisa busca integrar
+            aproveitamento de resíduos,
+            desenvolvimento tecnológico
+            e alternativas de substituição
+            de insumos convencionais,
+            contribuindo para modelos
+            produtivos mais circulares.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         03 - AÇÕES TECNOLÓGICAS
+    ====================================== -->
+
+    <section class="detalhe-frentes"
+             id="acoes">
+
+      <div class="container">
+
+        <div class="detalhe-frentes-cabecalho">
+
+          <span class="detalhe-etiqueta">
+            02 / SOLUÇÃO TECNOLÓGICA
+          </span>
+
+          <h2>
+            Da biomassa aos
+            <em>materiais de valor.</em>
+          </h2>
+
+          <p>
+            A pesquisa reúne etapas
+            de aproveitamento de resíduos,
+            processamento termoquímico
+            e investigação de possíveis
+            aplicações industriais
+            e ambientais dos materiais
+            produzidos.
+          </p>
+
+        </div>
+
+
+        <div class="detalhe-frentes-grid">
+
+          <!-- APROVEITAMENTO -->
+
+          <article class="detalhe-frente">
+
+            <span>01 / ECONOMIA CIRCULAR</span>
+
+            <h3>
+              Aproveitamento
+              de resíduos agrícolas
+            </h3>
+
+            <p>
+              Estudo de biomassas
+              lignocelulósicas provenientes
+              de atividades agrícolas
+              e agroindustriais,
+              considerando sua composição
+              e seu potencial
+              de transformação.
+            </p>
+
+            <p>
+              O aproveitamento desses
+              subprodutos pode contribuir
+              para reduzir o descarte
+              inadequado e criar
+              oportunidades de valorização
+              econômica de materiais
+              antes considerados resíduos.
+            </p>
+
+          </article>
+
+
+          <!-- PIRÓLISE -->
+
+          <article class="detalhe-frente">
+
+            <span>02 / CONVERSÃO TERMOQUÍMICA</span>
+
+            <h3>
+              Pirólise e produção
+              de materiais carbonáceos
+            </h3>
+
+            <p>
+              Investigação de processos
+              termoquímicos, incluindo
+              a pirólise controlada,
+              que utiliza aquecimento
+              em condições de ausência
+              ou baixa disponibilidade
+              de oxigênio.
+            </p>
+
+            <p>
+              A pesquisa busca estudar
+              parâmetros de conversão
+              e características dos
+              produtos obtidos, incluindo
+              materiais que podem
+              ser submetidos a etapas
+              de ativação para alcançar
+              propriedades de interesse.
+            </p>
+
+          </article>
+
+
+          <!-- APLICAÇÃO -->
+
+          <article class="detalhe-frente">
+
+            <span>03 / APLICAÇÕES AMBIENTAIS</span>
+
+            <h3>
+              Carbono ativado
+              e tratamento de água
+            </h3>
+
+            <p>
+              Avaliação do potencial
+              de materiais carbonáceos
+              em processos de adsorção
+              e tratamento ambiental,
+              incluindo possíveis
+              aplicações na remoção
+              de contaminantes
+              de águas e efluentes.
+            </p>
+
+            <p>
+              O desenvolvimento dessas
+              alternativas pode ampliar
+              o aproveitamento industrial
+              da biomassa e contribuir
+              para a pesquisa de materiais
+              mais sustentáveis.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         04 - PESQUISA E INOVAÇÃO
+    ====================================== -->
+
+    <section class="detalhe-final">
+
+      <div class="container detalhe-final-grid">
+
+        <div>
+
+          <span class="detalhe-etiqueta">
+            03 / PESQUISA E INOVAÇÃO
+          </span>
+
+          <h2>
+            Conhecimento científico
+            a serviço da
+            <em>bioeconomia.</em>
+          </h2>
+
+          <p>
+            A valorização de biomassas
+            agroindustriais representa
+            uma oportunidade de aproximar
+            inovação tecnológica,
+            responsabilidade ambiental
+            e desenvolvimento econômico.
+          </p>
+
+          <p>
+            Ao investigar novas rotas
+            de conversão e aplicações
+            para resíduos vegetais,
+            o INCT CO₂ Zero contribui
+            para o desenvolvimento
+            de soluções relacionadas
+            à economia circular,
+            ao tratamento ambiental
+            e à utilização mais eficiente
+            dos recursos naturais.
+          </p>
+
+        </div>
+
+
+        <div class="detalhe-acoes-finais">
+
+          <a href="todos-projetos.html"
+             class="detalhe-botao">
+            Ver todos os projetos ↗
+          </a>
+
+          <a href="../index.html#contato"
+             class="detalhe-link">
+            Entre em contato
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================
+       RODAPÉ PADRÃO
+  ====================================== -->
+
+
+<!-- =====================================
+     RODAPÉ PADRÃO - INCT CO2 ZERO
+     PÁGINAS INTERNAS
+====================================== -->
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <div class="footer-top">
+
+      <!-- LOGO E DESCRIÇÃO -->
+
+      <div>
+
+        <img
+          src="../assets/img/logo-inct.svg"
+          alt="Logo INCT CO2 Zero"
+          class="footer-logo">
+
+        <p>
+          Ciência, tecnologia e inovação para
+          promover o desenvolvimento sustentável
+          e contribuir para um futuro equilibrado.
+        </p>
+
+      </div>
+
+
+      <!-- NAVEGAÇÃO -->
+
+      <div>
+
+        <h4>Navegação</h4>
+
+        <div class="footer-links">
+
+          <a href="../index.html#inicio">
+            Início
+          </a>
+
+          <a href="instituto.html">
+            O Instituto
+          </a>
+
+          <a href="atuacao.html">
+            Atuação
+          </a>
+
+          <a href="projetos.html">
+            Projetos
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- INSTITUCIONAL -->
+
+      <div>
+
+        <h4>Institucional</h4>
+
+        <div class="footer-links">
+
+          <a href="nit.html">
+            NIT
+          </a>
+
+          <a href="../index.html#programa">
+            Pense e Compense
+          </a>
+
+          <a href="../index.html#agenda">
+            Agenda 2030
+          </a>
+
+          <a href="../index.html#contato">
+            Contato
+          </a>
+
+          <a href="#">
+            Voltar ao topo ↑
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PARTE INFERIOR DO RODAPÉ -->
+
+    <div class="footer-bottom">
+
+      <span>
+        © <span id="year"></span>
+        INCT CO₂ Zero.
+        Todos os direitos reservados.
+      </span>
+
+      <span>
+        Ciência • Tecnologia • Sustentabilidade
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+  <script src="../js/main.js"></script>
+
+</body>
+</html>

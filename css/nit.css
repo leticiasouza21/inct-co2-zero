@@ -1,0 +1,701 @@
+
+/* ==========================================
+   INCT CO2 ZERO
+   PÁGINA NIT
+========================================== */
+
+
+/* IDENTIDADE DA PÁGINA */
+
+.nit-etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.nit-etiqueta::before {
+  content: "";
+  width: 25px;
+  height: 1px;
+  background: currentColor;
+}
+
+.nit-etiqueta-clara {
+  color: #9aecc0;
+}
+
+.nit-banner h1,
+.nit-servicos h2,
+.nit-jornada h2,
+.nit-atendimento h2 {
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: -2px;
+  line-height: 1.16;
+}
+
+.nit-banner em,
+.nit-servicos em,
+.nit-jornada em,
+.nit-atendimento em {
+  font-style: normal;
+  color: var(--green);
+}
+
+
+/* ==========================================
+   01. BANNER DO NIT
+========================================== */
+
+.nit-banner {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 78% 45%,
+      rgba(42, 163, 118, 0.23),
+      transparent 40%
+    ),
+    linear-gradient(115deg, #071b2c, #113a46);
+
+  color: #fff;
+}
+
+.nit-banner-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 45px;
+  min-height: 560px;
+}
+
+.nit-banner-conteudo {
+  position: relative;
+  z-index: 2;
+  padding: 95px 0;
+}
+
+.nit-banner h1 {
+  max-width: 740px;
+  margin: 26px 0;
+  color: #fff;
+  font-size: clamp(43px, 5.4vw, 73px);
+}
+
+.nit-banner h1 em {
+  color: #98efc5;
+}
+
+.nit-banner-conteudo > p {
+  max-width: 530px;
+  color: #cadde3;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.nit-banner-botoes {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 34px;
+}
+
+.nit-botao-verde {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  padding: 17px 22px;
+  border-radius: 5px;
+
+  background: var(--green);
+  color: white;
+
+  font-size: 13px;
+  font-weight: 800;
+  transition: background .3s, transform .3s;
+}
+
+.nit-botao-verde:hover {
+  background: var(--green-dark);
+  transform: translateY(-3px);
+}
+
+.nit-botao-texto {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+
+  padding: 12px 0;
+  border-bottom: 1px solid #98efc5;
+
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* ILUSTRAÇÃO DA LÂMPADA */
+
+.nit-banner-ilustracao {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 430px;
+}
+
+.nit-luz-fundo {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(80, 216, 151, 0.24),
+    rgba(80, 216, 151, 0.06) 55%,
+    transparent 72%
+  );
+
+  filter: blur(16px);
+}
+
+.nit-lampada {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 350px);
+  height: auto;
+
+  filter: drop-shadow(
+    0 0 25px rgba(121, 239, 176, .12)
+  );
+}
+
+.nit-ilustracao-legenda {
+  color: #a9dcc6;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+
+/* ==========================================
+   02. NOSSOS SERVIÇOS
+========================================== */
+
+.nit-servicos {
+  padding: 105px 0 115px;
+  background: #fff;
+}
+
+.nit-secao-cabecalho {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 65px;
+  margin-bottom: 50px;
+}
+
+.nit-secao-cabecalho > div {
+  max-width: 680px;
+}
+
+.nit-servicos h2 {
+  margin-top: 22px;
+  font-size: clamp(32px, 4vw, 51px);
+}
+
+.nit-secao-cabecalho > p {
+  max-width: 300px;
+  padding-bottom: 4px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.nit-servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.nit-servico {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 285px;
+  padding: 28px 24px;
+
+  background: #f8fbf9;
+  border: 1px solid #e2ebe7;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+.nit-servico:hover {
+  transform: translateY(-5px);
+  border-color: #aed8c4;
+  box-shadow: 0 18px 40px rgba(8, 44, 36, .08);
+}
+
+.nit-servico-numero {
+  color: #639b81;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.nit-servico-icone {
+  display: grid;
+  place-items: center;
+
+  width: 54px;
+  height: 54px;
+  margin: 20px 0 21px;
+
+  border-radius: 12px;
+  background: #e6f4ec;
+  color: var(--green);
+
+  font-size: 30px;
+  line-height: 1;
+}
+
+.nit-servico h3 {
+  margin-bottom: 13px;
+  color: var(--navy);
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.nit-servico p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+
+/* ==========================================
+   03. DA PESQUISA À INOVAÇÃO
+========================================== */
+
+.nit-jornada {
+  padding: 105px 0 95px;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(29, 153, 107, .16),
+      transparent 40%
+    ),
+    #091e31;
+
+  color: #fff;
+}
+
+.nit-jornada-intro {
+  max-width: 770px;
+  margin-bottom: 65px;
+}
+
+.nit-jornada h2 {
+  margin: 22px 0;
+  color: white;
+  font-size: clamp(32px, 4vw, 53px);
+}
+
+.nit-jornada h2 em {
+  color: #98efc5;
+}
+
+.nit-jornada-intro > p {
+  max-width: 620px;
+  color: #c0d2da;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* FLUXO VISUAL */
+
+.nit-jornada-linha {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  position: relative;
+}
+
+.nit-jornada-linha::before {
+  content: "";
+  position: absolute;
+
+  top: 28px;
+  left: 4%;
+  right: 4%;
+
+  height: 1px;
+  background: rgba(157, 228, 191, .38);
+}
+
+.nit-passo {
+  position: relative;
+  z-index: 1;
+}
+
+.nit-passo-circulo {
+  display: grid;
+  place-items: center;
+
+  width: 57px;
+  height: 57px;
+  margin-bottom: 25px;
+
+  border-radius: 50%;
+  border: 1px solid #7ed8aa;
+  background: #123f43;
+
+  color: #aeffd1;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.nit-passo h3 {
+  color: white;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.nit-passo p {
+  max-width: 175px;
+  color: #b6cbd3;
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+.nit-jornada-frase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  margin-top: 75px;
+  padding: 27px 0;
+  border-top: 1px solid rgba(255,255,255,.17);
+}
+
+.nit-jornada-frase span {
+  flex-shrink: 0;
+  color: #9ce9c1;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.nit-jornada-frase strong {
+  max-width: 470px;
+  color: #e2f3ec;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+
+/* ==========================================
+   04. FALE COM O NIT
+========================================== */
+
+.nit-atendimento {
+  padding: 110px 0;
+  background: #eff6f2;
+}
+
+.nit-atendimento-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 95px;
+  align-items: center;
+}
+
+.nit-atendimento h2 {
+  margin: 22px 0;
+  font-size: clamp(33px, 4vw, 52px);
+}
+
+.nit-atendimento-texto > p {
+  max-width: 530px;
+  margin-bottom: 19px;
+
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* QUADRO DE CONTATO */
+
+.nit-atendimento-card {
+  background: #fff;
+  border-top: 4px solid var(--green);
+  padding: clamp(28px, 4vw, 48px);
+
+  box-shadow: 0 24px 60px rgba(8, 44, 36, .07);
+}
+
+.nit-card-topo {
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.nit-card-icone {
+  display: grid;
+  place-items: center;
+
+  width: 64px;
+  height: 64px;
+  margin: 25px 0;
+
+  border-radius: 50%;
+  background: #e4f5ec;
+  color: var(--green);
+  font-size: 30px;
+}
+
+.nit-atendimento-card h3 {
+  max-width: 350px;
+  margin-bottom: 18px;
+
+  color: var(--navy);
+  font-size: 29px;
+  letter-spacing: -1px;
+  line-height: 1.3;
+}
+
+.nit-atendimento-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.nit-atendimento-botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+  margin-top: 30px;
+  padding: 17px 23px;
+
+  border-radius: 5px;
+  background: var(--green);
+  color: white;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  transition: background .3s, transform .3s;
+}
+
+.nit-atendimento-botao:hover {
+  background: var(--green-dark);
+  transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 1100px) {
+
+  .nit-servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nit-jornada-linha {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 45px;
+  }
+
+  .nit-jornada-linha::before {
+    display: none;
+  }
+
+  .nit-atendimento-grid {
+    gap: 45px;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .nit-banner-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .nit-banner-conteudo {
+    padding: 75px 0 25px;
+  }
+
+  .nit-banner-ilustracao {
+    min-height: 290px;
+    padding-bottom: 45px;
+  }
+
+  .nit-lampada {
+    max-height: 290px;
+  }
+
+  .nit-secao-cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .nit-secao-cabecalho > p {
+    max-width: 600px;
+  }
+
+  .nit-atendimento-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .nit-banner h1 {
+    font-size: clamp(39px, 9vw, 51px);
+    letter-spacing: -1.5px;
+  }
+
+  .nit-banner-conteudo > p {
+    font-size: 14px;
+  }
+
+  .nit-banner-botoes {
+    gap: 18px;
+  }
+
+  .nit-servicos,
+  .nit-jornada,
+  .nit-atendimento {
+    padding: 75px 0;
+  }
+
+  .nit-servicos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nit-servico {
+    min-height: auto;
+    padding: 26px;
+  }
+
+  .nit-jornada-linha {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 34px 17px;
+  }
+
+  .nit-jornada-frase {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 55px;
+  }
+
+  .nit-atendimento-card h3 {
+    font-size: 25px;
+  }
+
+  .nit-atendimento-botao {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .nit-jornada-linha {
+    grid-template-columns: 1fr;
+  }
+
+  .nit-passo p {
+    max-width: 100%;
+  }
+}
+
+/* ABERTURA COMPACTA DA PÁGINA NIT */
+
+.nit-banner-grid {
+  min-height: 310px;
+  grid-template-columns: 1.4fr .6fr;
+  gap: 25px;
+}
+
+.nit-banner-conteudo {
+  padding: 48px 0;
+}
+
+.nit-banner h1 {
+  max-width: 690px;
+  margin: 15px 0;
+  font-size: clamp(32px, 3.4vw, 47px);
+  letter-spacing: -1.5px;
+}
+
+.nit-banner-conteudo > p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.nit-banner-botoes {
+  margin-top: 22px;
+}
+
+.nit-banner-ilustracao {
+  min-height: 250px;
+}
+
+.nit-lampada {
+  max-width: 190px;
+}
+
+.nit-luz-fundo {
+  width: 230px;
+  height: 230px;
+}
+
+.nit-ilustracao-legenda {
+  font-size: 8px;
+}
+
+@media (max-width: 800px) {
+  .nit-banner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nit-banner-conteudo {
+    padding: 45px 0 15px;
+  }
+
+  .nit-banner-ilustracao {
+    min-height: 175px;
+    padding-bottom: 25px;
+  }
+
+  .nit-lampada {
+    max-width: 135px;
+    max-height: 175px;
+  }
+}

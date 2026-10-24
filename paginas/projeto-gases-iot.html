@@ -1,0 +1,852 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Conheça o projeto de Monitoramento de Gases com IoT do INCT CO₂ Zero, voltado à medição inteligente de emissões de gases de efeito estufa.">
+
+  <title>Monitoramento de Gases com IoT | INCT CO₂ Zero</title>
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="../css/style.css">
+
+  <link rel="stylesheet"
+        href="../css/projeto-detalhe.css">
+
+  <!-- Visual exclusivo deste projeto -->
+
+  <style>
+
+    .iot-visual {
+      min-height: 275px;
+      padding: 25px;
+      border-radius: 8px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(65, 190, 145, .28),
+          transparent 48%
+        ),
+        linear-gradient(
+          135deg,
+          #091e31,
+          #105c4d
+        );
+
+      color: #fff;
+    }
+
+    .iot-visual-topo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .iot-visual-topo span {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      color: #b7ebd0;
+    }
+
+    .iot-sinal {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #71e8a8;
+      box-shadow: 0 0 0 6px rgba(113,232,168,.12);
+    }
+
+    .iot-visual-centro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .iot-metrica {
+      padding: 19px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 6px;
+      background: rgba(255,255,255,.07);
+    }
+
+    .iot-metrica strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #fff;
+      font-family: 'Manrope', sans-serif;
+      font-size: 32px;
+      letter-spacing: -1px;
+    }
+
+    .iot-metrica span {
+      color: #c5e2d8;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .iot-visual-rodape {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: #a6d6c3;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .5px;
+    }
+
+    @media (max-width: 600px) {
+
+      .iot-visual {
+        min-height: 230px;
+        padding: 18px;
+      }
+
+      .iot-metrica {
+        padding: 13px;
+      }
+
+      .iot-metrica strong {
+        font-size: 25px;
+      }
+
+      .iot-visual-rodape {
+        flex-direction: column;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =====================================
+       CABEÇALHO PADRÃO
+  ====================================== -->
+
+  <header class="site-header">
+
+    <div class="container header-content">
+
+      <a href="../index.html"
+         class="logo"
+         aria-label="Página inicial do INCT CO2 Zero">
+
+        <img
+          src="../assets/img/logo-inct.svg"
+          alt="Logo INCT CO2 Zero">
+
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="menu"
+        aria-expanded="false">
+        ☰
+      </button>
+
+      
+<nav id="menu"
+     class="main-nav"
+     aria-label="Navegação principal">
+
+  <a href="../index.html">
+    Início
+  </a>
+
+  <a href="instituto.html">
+    O Instituto
+  </a>
+
+  <a href="atuacao.html">
+    Atuação
+  </a>
+
+  <!-- MENU SUSPENSO DE PROJETOS -->
+
+  <div class="nav-dropdown">
+
+    <div class="nav-dropdown-topo">
+
+      <a href="projetos.html"
+         class="nav-projetos-link">
+        Projetos
+      </a>
+
+      <button
+        type="button"
+        class="nav-dropdown-toggle"
+        aria-label="Mostrar opções de projetos"
+        aria-expanded="false"
+        aria-controls="submenu-projetos">
+        <span aria-hidden="true">⌄</span>
+      </button>
+
+    </div>
+
+    <div class="nav-dropdown-menu"
+         id="submenu-projetos">
+
+      <a href="todos-projetos.html">
+        Portfólio de Projetos
+        <span aria-hidden="true">↗</span>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- FIM DO MENU DE PROJETOS -->
+
+  <a href="nit.html">
+    NIT
+  </a>
+
+  <a href="../index.html#contato"
+     class="header-button">
+    Contato ↗
+  </a>
+
+</nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =====================================
+         01 - APRESENTAÇÃO DO PROJETO
+    ====================================== -->
+
+    <section class="detalhe-hero">
+
+      <div class="container">
+
+        <a href="todos-projetos.html"
+           class="detalhe-voltar">
+          ← Todos os projetos
+        </a>
+
+        <div class="detalhe-hero-grid">
+
+          <div class="detalhe-hero-texto">
+
+            <span class="detalhe-etiqueta">
+              PROJETO DE INOVAÇÃO TECNOLÓGICA
+            </span>
+
+            <h1>
+              Monitoramento
+              de Gases com
+              <em>IoT.</em>
+            </h1>
+
+            <p class="detalhe-local">
+              Tecnologia ambiental · Monitoramento de GEE
+            </p>
+
+            <p class="detalhe-resumo">
+              O projeto de Monitoramento
+              de Gases com IoT desenvolve
+              uma solução tecnológica
+              para acompanhar emissões
+              de gases de efeito estufa
+              em ambientes industriais
+              e áreas de disposição
+              de resíduos sólidos.
+            </p>
+
+            <p class="detalhe-resumo">
+              A iniciativa integra sensores
+              inteligentes, transmissão
+              de dados e plataformas digitais
+              para tornar o monitoramento
+              de dióxido de carbono (CO₂)
+              e metano (CH₄) mais acessível,
+              contínuo e eficiente.
+            </p>
+
+          </div>
+
+
+          <!-- PAINEL VISUAL ILUSTRATIVO -->
+
+          <div class="iot-visual"
+               role="img"
+               aria-label="Ilustração de um sistema conectado de monitoramento de CO2 e metano">
+
+            <div class="iot-visual-topo">
+
+              <span>
+                INCT CO₂ ZERO / IoT
+              </span>
+
+              <span class="iot-sinal"></span>
+
+            </div>
+
+            <div class="iot-visual-centro">
+
+              <div class="iot-metrica">
+
+                <strong>CO₂</strong>
+
+                <span>
+                  DIÓXIDO DE CARBONO
+                </span>
+
+              </div>
+
+              <div class="iot-metrica">
+
+                <strong>CH₄</strong>
+
+                <span>
+                  METANO
+                </span>
+
+              </div>
+
+            </div>
+
+            <div class="iot-visual-rodape">
+
+              <span>
+                SENSORES CONECTADOS
+              </span>
+
+              <span>
+                TELEMETRIA AMBIENTAL
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- INFORMAÇÕES TECNOLÓGICAS -->
+
+        <div class="detalhe-indicadores">
+
+          <div class="detalhe-indicador">
+
+            <strong>IoT</strong>
+
+            <span>
+              Internet das Coisas aplicada
+              ao monitoramento ambiental
+            </span>
+
+          </div>
+
+          <div class="detalhe-indicador">
+
+            <strong>CO₂ / CH₄</strong>
+
+            <span>
+              Gases considerados
+              na solução tecnológica
+            </span>
+
+          </div>
+
+          <div class="detalhe-indicador">
+
+            <strong>2024</strong>
+
+            <span>
+              Ano indicado no número
+              do pedido de patente
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         02 - CONTEXTO E ATUAÇÃO
+    ====================================== -->
+
+    <section class="detalhe-secao"
+             id="contexto">
+
+      <div class="container detalhe-duas-colunas">
+
+        <div>
+
+          <span class="detalhe-etiqueta">
+            01 / CONTEXTO E ATUAÇÃO
+          </span>
+
+          <h2>
+            Tecnologia para compreender
+            e monitorar as
+            <em>emissões atmosféricas.</em>
+          </h2>
+
+          <div class="detalhe-destaque-texto">
+            Dados ambientais mais acessíveis,
+            monitoramento contínuo
+            e informações técnicas
+            para apoiar decisões
+            de gestão climática.
+          </div>
+
+        </div>
+
+
+        <div class="detalhe-texto">
+
+          <h3>
+            O desafio do monitoramento de gases
+          </h3>
+
+          <p>
+            O controle das emissões
+            de gases de efeito estufa
+            representa um desafio
+            para empresas, instalações
+            industriais e unidades
+            de tratamento de resíduos.
+            Em muitos casos, a medição
+            depende de levantamentos
+            periódicos que não permitem
+            acompanhar continuamente
+            todas as variações
+            das concentrações de gases.
+          </p>
+
+          <p>
+            O metano (CH₄), por exemplo,
+            pode ser liberado durante
+            a decomposição de resíduos
+            orgânicos em aterros sanitários.
+            Já o dióxido de carbono (CO₂)
+            está associado a diversos
+            processos industriais
+            e atividades que envolvem
+            a utilização de energia.
+          </p>
+
+          <p>
+            A identificação de alterações
+            nas concentrações desses gases
+            é importante para melhorar
+            a qualidade das informações
+            ambientais, apoiar ações
+            preventivas e orientar
+            estratégias de redução
+            de emissões.
+          </p>
+
+
+          <h3>
+            A atuação do INCT CO₂ Zero
+          </h3>
+
+          <p>
+            O INCT CO₂ Zero desenvolve
+            uma arquitetura tecnológica
+            baseada em Internet das Coisas
+            (IoT), integrando dispositivos
+            de medição, comunicação
+            entre equipamentos
+            e armazenamento de dados.
+          </p>
+
+          <p>
+            A proposta é utilizar sensores
+            instalados em pontos estratégicos
+            para coletar informações
+            ambientais e enviá-las
+            a sistemas digitais
+            de acompanhamento.
+          </p>
+
+          <p>
+            O projeto busca reduzir
+            a dependência exclusiva
+            de medições pontuais,
+            ampliando a disponibilidade
+            de dados para análises técnicas,
+            relatórios de sustentabilidade
+            e identificação de situações
+            que exijam investigação.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         03 - AÇÕES TECNOLÓGICAS
+    ====================================== -->
+
+    <section class="detalhe-frentes"
+             id="acoes">
+
+      <div class="container">
+
+        <div class="detalhe-frentes-cabecalho">
+
+          <span class="detalhe-etiqueta">
+            02 / SOLUÇÃO TECNOLÓGICA
+          </span>
+
+          <h2>
+            Sensores, conectividade
+            e <em>inteligência de dados.</em>
+          </h2>
+
+          <p>
+            A solução combina
+            equipamentos de monitoramento,
+            comunicação digital
+            e análise das informações
+            coletadas para apoiar
+            a gestão de emissões
+            de gases de efeito estufa.
+          </p>
+
+        </div>
+
+
+        <div class="detalhe-frentes-grid">
+
+          <!-- SENSORES -->
+
+          <article class="detalhe-frente">
+
+            <span>01 / HARDWARE INTELIGENTE</span>
+
+            <h3>
+              Sensores autônomos
+              de monitoramento
+            </h3>
+
+            <p>
+              Desenvolvimento de dispositivos
+              capazes de realizar medições
+              de gases em diferentes pontos
+              de uma instalação, com foco
+              em dióxido de carbono
+              e metano.
+            </p>
+
+            <p>
+              A proposta contempla
+              sensores calibrados
+              e alternativas de alimentação
+              energética, incluindo
+              pequenos painéis solares,
+              para favorecer a operação
+              em áreas externas.
+            </p>
+
+          </article>
+
+
+          <!-- CONECTIVIDADE -->
+
+          <article class="detalhe-frente">
+
+            <span>02 / CONECTIVIDADE IoT</span>
+
+            <h3>
+              Transmissão
+              e integração de dados
+            </h3>
+
+            <p>
+              Utilização de redes
+              de comunicação para
+              transmitir os dados coletados
+              pelos sensores a sistemas
+              de processamento
+              e armazenamento digital.
+            </p>
+
+            <p>
+              A arquitetura prevê
+              o uso de telemetria
+              e protocolos de comunicação,
+              como MQTT, permitindo
+              integrar diferentes
+              dispositivos em uma
+              estrutura de monitoramento
+              distribuído.
+            </p>
+
+          </article>
+
+
+          <!-- ANÁLISE DE DADOS -->
+
+          <article class="detalhe-frente">
+
+            <span>03 / ANÁLISE AMBIENTAL</span>
+
+            <h3>
+              Painéis digitais
+              e alertas inteligentes
+            </h3>
+
+            <p>
+              Desenvolvimento de recursos
+              de visualização das medições,
+              acompanhamento de séries
+              temporais e identificação
+              de variações nas concentrações
+              dos gases monitorados.
+            </p>
+
+            <p>
+              O sistema também prevê
+              mecanismos de alerta
+              e análise de dados
+              para auxiliar equipes técnicas
+              na identificação de situações
+              que demandem avaliação
+              e medidas preventivas.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         04 - INOVAÇÃO E APLICAÇÃO
+    ====================================== -->
+
+    <section class="detalhe-final">
+
+      <div class="container detalhe-final-grid">
+
+        <div>
+
+          <span class="detalhe-etiqueta">
+            03 / PESQUISA E INOVAÇÃO
+          </span>
+
+          <h2>
+            Informação ambiental
+            para decisões
+            <em>mais inteligentes.</em>
+          </h2>
+
+          <p>
+            O projeto reúne pesquisa
+            aplicada, instrumentação
+            eletrônica e tecnologias
+            digitais para desenvolver
+            novas possibilidades
+            de monitoramento de emissões
+            em instalações industriais
+            e aterros sanitários.
+          </p>
+
+          <p>
+            A solução possui indicação
+            de pedido de patente nacional
+            BR1020240030580 e apresenta
+            potencial para apoiar
+            atividades de monitoramento
+            ambiental, elaboração
+            de relatórios ASG
+            e estratégias de
+            gestão climática.
+          </p>
+
+        </div>
+
+
+        <div class="detalhe-acoes-finais">
+
+          <a href="todos-projetos.html"
+             class="detalhe-botao">
+            Ver todos os projetos ↗
+          </a>
+
+          <a href="../index.html#contato"
+             class="detalhe-link">
+            Entre em contato
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================
+       RODAPÉ PADRÃO
+  ====================================== -->
+
+
+<!-- =====================================
+     RODAPÉ PADRÃO - INCT CO2 ZERO
+     PÁGINAS INTERNAS
+====================================== -->
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <div class="footer-top">
+
+      <!-- LOGO E DESCRIÇÃO -->
+
+      <div>
+
+        <img
+          src="../assets/img/logo-inct.svg"
+          alt="Logo INCT CO2 Zero"
+          class="footer-logo">
+
+        <p>
+          Ciência, tecnologia e inovação para
+          promover o desenvolvimento sustentável
+          e contribuir para um futuro equilibrado.
+        </p>
+
+      </div>
+
+
+      <!-- NAVEGAÇÃO -->
+
+      <div>
+
+        <h4>Navegação</h4>
+
+        <div class="footer-links">
+
+          <a href="../index.html#inicio">
+            Início
+          </a>
+
+          <a href="instituto.html">
+            O Instituto
+          </a>
+
+          <a href="atuacao.html">
+            Atuação
+          </a>
+
+          <a href="projetos.html">
+            Projetos
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- INSTITUCIONAL -->
+
+      <div>
+
+        <h4>Institucional</h4>
+
+        <div class="footer-links">
+
+          <a href="nit.html">
+            NIT
+          </a>
+
+          <a href="../index.html#programa">
+            Pense e Compense
+          </a>
+
+          <a href="../index.html#agenda">
+            Agenda 2030
+          </a>
+
+          <a href="../index.html#contato">
+            Contato
+          </a>
+
+          <a href="#">
+            Voltar ao topo ↑
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PARTE INFERIOR DO RODAPÉ -->
+
+    <div class="footer-bottom">
+
+      <span>
+        © <span id="year"></span>
+        INCT CO₂ Zero.
+        Todos os direitos reservados.
+      </span>
+
+      <span>
+        Ciência • Tecnologia • Sustentabilidade
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  <script src="../js/main.js"></script>
+
+</body>
+</html>

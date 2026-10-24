@@ -1,0 +1,483 @@
+
+/* ==========================================
+   INCT CO2 ZERO
+   PÁGINA O INSTITUTO
+========================================== */
+
+/* MENU */
+
+.main-nav .nav-current {
+  color: var(--green);
+}
+
+/* IDENTIDADE TIPOGRÁFICA */
+
+.editorial-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(32px, 3.8vw, 52px);
+  letter-spacing: -2px;
+  line-height: 1.2;
+}
+
+.editorial-title em {
+  font-style: normal;
+  color: var(--green);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+}
+
+.eyebrow-claro {
+  color: #9be9bc;
+}
+
+/* ==========================================
+   01 - BANNER
+========================================== */
+
+.instituto-banner {
+  position: relative;
+  isolation: isolate;
+  min-height: 530px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 24, 40, 0.72) 0%,
+      rgba(4, 24, 40, 0.35) 55%,
+      rgba(4, 24, 40, 0.08) 100%
+    ),
+    url('../assets/img/banner-instituto.png')
+    center center / cover no-repeat;
+}
+
+.banner-conteudo {
+  position: relative;
+  z-index: 1;
+  padding: 90px 0 100px;
+}
+
+.instituto-banner h1 {
+  max-width: 730px;
+  margin: 24px 0;
+  color: #ffffff;
+  font-size: clamp(43px, 5.5vw, 76px);
+  letter-spacing: -3px;
+  line-height: 1.12;
+}
+
+.instituto-banner h1 em {
+  display: block;
+  font-style: normal;
+  color: #9be9bc;
+}
+
+.instituto-banner p {
+  max-width: 520px;
+  color: #ecf6f4;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.banner-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #9be9bc;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.banner-link span {
+  color: #9be9bc;
+}
+
+.banner-legenda {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  font-size: 10px;
+  color: #e7f4ed;
+  background: rgba(5, 25, 30, 0.45);
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+/* ==========================================
+   02 - IDENTIDADE INSTITUCIONAL
+========================================== */
+
+.identidade-section {
+  padding: 105px 0;
+  background: #ffffff;
+}
+
+.identidade-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.identidade-esquerda h2 {
+  margin: 22px 0 35px;
+}
+
+.fundacao-bloco {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border);
+}
+
+.fundacao-bloco strong {
+  font-family: 'Manrope', sans-serif;
+  font-size: 58px;
+  letter-spacing: -3px;
+  color: var(--green);
+}
+
+.fundacao-bloco span {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.identidade-direita h3 {
+  font-size: 23px;
+  letter-spacing: -.6px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.identidade-direita > p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.95;
+  margin-bottom: 19px;
+}
+
+.diferencial-institucional {
+  margin-top: 30px;
+  padding: 25px 28px;
+  background: #edf5f1;
+  border-left: 3px solid var(--green);
+}
+
+.diferencial-institucional span {
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.diferencial-institucional p {
+  margin-top: 12px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   03 - MISSÃO, VISÃO E VALORES
+========================================== */
+
+.essencia-section {
+  padding: 95px 0;
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 90% 5%,
+      rgba(40, 150, 113, 0.19),
+      transparent 39%
+    ),
+    #091e31;
+}
+
+.essencia-cabecalho {
+  max-width: 770px;
+  margin-bottom: 48px;
+}
+
+.essencia-cabecalho h2 {
+  color: #ffffff;
+  margin: 22px 0 18px;
+}
+
+.essencia-cabecalho h2 em {
+  color: #9be9bc;
+}
+
+.essencia-cabecalho > p {
+  color: #bcd2da;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.essencia-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.essencia-item {
+  padding: 12px 32px 12px;
+  border-left: 1px solid rgba(170, 214, 213, 0.25);
+}
+
+.essencia-item:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.essencia-numero {
+  color: #9be9bc;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.essencia-item h3 {
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 1.4;
+  margin: 22px 0 14px;
+}
+
+.essencia-item p {
+  color: #bfd5dc;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ==========================================
+   04 - TRAJETÓRIA
+========================================== */
+
+.trajetoria-section {
+  padding: 105px 0 85px;
+  background: #f2f7f4;
+}
+
+.trajetoria-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.trajetoria-intro h2 {
+  margin: 22px 0 25px;
+}
+
+.trajetoria-intro p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+.marco-item {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  gap: 22px;
+  padding: 21px 0;
+  border-bottom: 1px solid #d6e4de;
+}
+
+.marco-item:first-child {
+  padding-top: 0;
+}
+
+.marco-ano {
+  color: var(--green);
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.marco-item h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.marco-item p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* ==========================================
+   GOVERNANÇA
+========================================== */
+
+.governanca-faixa {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 70px;
+  padding: 42px;
+  margin-top: 75px;
+  background: #ffffff;
+  border: 1px solid #dce9e3;
+  border-top: 4px solid var(--green);
+}
+
+.governanca-resumo h3 {
+  max-width: 520px;
+  font-size: clamp(22px, 2.5vw, 29px);
+  letter-spacing: -1px;
+  line-height: 1.4;
+  margin: 17px 0;
+}
+
+.governanca-resumo p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.governanca-dados {
+  display: flex;
+  flex-direction: column;
+}
+
+.governanca-dados > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.governanca-dados > div:first-child {
+  padding-top: 0;
+}
+
+.governanca-dados > div:last-child {
+  border-bottom: 0;
+}
+
+.governanca-dados span {
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.governanca-dados strong {
+  color: var(--navy);
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+
+.nota-documental {
+  margin-top: 19px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 950px) {
+
+  .identidade-grid,
+  .trajetoria-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .essencia-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .essencia-item,
+  .essencia-item:first-child {
+    padding: 0 0 0 24px;
+    border-left: 2px solid #458b72;
+  }
+
+  .governanca-faixa {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .instituto-banner {
+    min-height: 470px;
+    background-position: 58% center;
+  }
+
+  .banner-conteudo {
+    padding: 75px 0 90px;
+  }
+
+  .instituto-banner h1 {
+    font-size: clamp(37px, 9vw, 47px);
+    letter-spacing: -1.7px;
+  }
+
+  .instituto-banner p {
+    font-size: 14px;
+  }
+
+  .banner-legenda {
+    font-size: 9px;
+  }
+
+  .identidade-section,
+  .essencia-section {
+    padding: 75px 0;
+  }
+
+  .trajetoria-section {
+    padding: 75px 0 65px;
+  }
+
+  .editorial-title {
+    letter-spacing: -1.3px;
+  }
+
+  .fundacao-bloco strong {
+    font-size: 47px;
+  }
+
+  .governanca-faixa {
+    padding: 25px;
+    margin-top: 50px;
+  }
+
+  .marco-item {
+    grid-template-columns: 52px 1fr;
+    gap: 14px;
+  }
+}

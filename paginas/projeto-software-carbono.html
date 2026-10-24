@@ -1,0 +1,909 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Conheça o projeto Software de Inventário de Carbono do INCT CO₂ Zero, uma proposta de solução digital para a gestão das emissões de gases de efeito estufa.">
+
+  <title>Software de Inventário de Carbono | INCT CO₂ Zero</title>
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="../css/style.css">
+
+  <link rel="stylesheet"
+        href="../css/projeto-detalhe.css">
+
+  <!-- VISUAL EXCLUSIVO DO SOFTWARE -->
+
+  <style>
+
+    .carbono-visual {
+      min-height: 275px;
+      padding: 22px;
+      border-radius: 8px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(70, 185, 132, .24),
+          transparent 45%
+        ),
+        linear-gradient(
+          135deg,
+          #091e31,
+          #105444
+        );
+
+      color: #fff;
+    }
+
+    .carbono-painel-topo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+
+      padding-bottom: 13px;
+      border-bottom: 1px solid rgba(255,255,255,.15);
+    }
+
+    .carbono-painel-topo strong {
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: .4px;
+    }
+
+    .carbono-painel-topo span {
+      color: #a5e9c4;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .carbono-painel-corpo {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .carbono-painel-card {
+      padding: 16px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 6px;
+    }
+
+    .carbono-painel-card > span {
+      display: block;
+      margin-bottom: 15px;
+
+      color: #b9dccd;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .carbono-painel-card > strong {
+      display: block;
+      margin-bottom: 8px;
+
+      color: #fff;
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .carbono-painel-card > small {
+      color: #9fe2bc;
+      font-size: 10px;
+    }
+
+    .carbono-barras {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 9px;
+      height: 85px;
+      margin-top: 15px;
+    }
+
+    .carbono-barras div {
+      flex: 1;
+      border-radius: 3px 3px 0 0;
+      background: linear-gradient(
+        180deg,
+        #8de2b0,
+        #268c69
+      );
+    }
+
+    .carbono-barras div:nth-child(1) {
+      height: 42%;
+    }
+
+    .carbono-barras div:nth-child(2) {
+      height: 75%;
+    }
+
+    .carbono-barras div:nth-child(3) {
+      height: 55%;
+    }
+
+    .carbono-barras div:nth-child(4) {
+      height: 90%;
+    }
+
+    .carbono-barras div:nth-child(5) {
+      height: 63%;
+    }
+
+    .carbono-visual-rodape {
+      color: #a8dac4;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .7px;
+    }
+
+    @media (max-width: 600px) {
+
+      .carbono-visual {
+        padding: 17px;
+        min-height: 230px;
+      }
+
+      .carbono-painel-card {
+        padding: 12px;
+      }
+
+      .carbono-painel-card > strong {
+        font-size: 17px;
+      }
+
+      .carbono-barras {
+        height: 65px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =====================================
+       CABEÇALHO PADRÃO
+  ====================================== -->
+
+  <header class="site-header">
+
+    <div class="container header-content">
+
+      <a href="../index.html"
+         class="logo"
+         aria-label="Página inicial do INCT CO2 Zero">
+
+        <img
+          src="../assets/img/logo-inct.svg"
+          alt="Logo INCT CO2 Zero">
+
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="menu"
+        aria-expanded="false">
+        ☰
+      </button>
+
+      
+<nav id="menu"
+     class="main-nav"
+     aria-label="Navegação principal">
+
+  <a href="../index.html">
+    Início
+  </a>
+
+  <a href="instituto.html">
+    O Instituto
+  </a>
+
+  <a href="atuacao.html">
+    Atuação
+  </a>
+
+  <!-- MENU SUSPENSO DE PROJETOS -->
+
+  <div class="nav-dropdown">
+
+    <div class="nav-dropdown-topo">
+
+      <a href="projetos.html"
+         class="nav-projetos-link">
+        Projetos
+      </a>
+
+      <button
+        type="button"
+        class="nav-dropdown-toggle"
+        aria-label="Mostrar opções de projetos"
+        aria-expanded="false"
+        aria-controls="submenu-projetos">
+        <span aria-hidden="true">⌄</span>
+      </button>
+
+    </div>
+
+    <div class="nav-dropdown-menu"
+         id="submenu-projetos">
+
+      <a href="todos-projetos.html">
+        Portfólio de Projetos
+        <span aria-hidden="true">↗</span>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- FIM DO MENU DE PROJETOS -->
+
+  <a href="nit.html">
+    NIT
+  </a>
+
+  <a href="../index.html#contato"
+     class="header-button">
+    Contato ↗
+  </a>
+
+</nav>
+
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =====================================
+         01 - APRESENTAÇÃO DO PROJETO
+    ====================================== -->
+
+    <section class="detalhe-hero">
+
+      <div class="container">
+
+        <a href="todos-projetos.html"
+           class="detalhe-voltar">
+          ← Todos os projetos
+        </a>
+
+        <div class="detalhe-hero-grid">
+
+          <div class="detalhe-hero-texto">
+
+            <span class="detalhe-etiqueta">
+              PROJETO DE TECNOLOGIA DIGITAL
+            </span>
+
+            <h1>
+              Software de
+              <em>Inventário de Carbono.</em>
+            </h1>
+
+            <p class="detalhe-local">
+              Tecnologia digital · Gestão climática
+            </p>
+
+            <p class="detalhe-resumo">
+              O projeto Software de Inventário
+              de Carbono propõe uma plataforma
+              digital para organizar, calcular
+              e acompanhar as emissões
+              de gases de efeito estufa
+              associadas às atividades
+              de organizações e instituições.
+            </p>
+
+            <p class="detalhe-resumo">
+              A solução busca integrar
+              informações ambientais,
+              metodologias de cálculo
+              e recursos de visualização
+              em um único ambiente,
+              facilitando a elaboração
+              de inventários e apoiando
+              a tomada de decisões
+              relacionadas à gestão
+              do carbono.
+            </p>
+
+          </div>
+
+
+          <!-- PAINEL ILUSTRATIVO DO SOFTWARE -->
+
+          <div class="carbono-visual"
+               role="img"
+               aria-label="Ilustração conceitual de um painel digital para inventários de emissões de carbono">
+
+            <div class="carbono-painel-topo">
+
+              <strong>
+                INCT CO₂ ZERO
+              </strong>
+
+              <span>
+                CARBON MANAGEMENT
+              </span>
+
+            </div>
+
+
+            <div class="carbono-painel-corpo">
+
+              <div class="carbono-painel-card">
+
+                <span>
+                  CONTROLE DE EMISSÕES
+                </span>
+
+                <strong>
+                  CO₂e
+                </strong>
+
+                <small>
+                  Inventário de GEE
+                </small>
+
+              </div>
+
+
+              <div class="carbono-painel-card">
+
+                <span>
+                  ANÁLISE DE EMISSÕES
+                </span>
+
+                <div class="carbono-barras">
+
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="carbono-visual-rodape">
+              DADOS · INDICADORES · RELATÓRIOS
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- INFORMAÇÕES DA SOLUÇÃO -->
+
+        <div class="detalhe-indicadores">
+
+          <div class="detalhe-indicador">
+
+            <strong>GEE</strong>
+
+            <span>
+              Inventário de gases
+              de efeito estufa
+            </span>
+
+          </div>
+
+          <div class="detalhe-indicador">
+
+            <strong>CO₂e</strong>
+
+            <span>
+              Emissões expressas em
+              dióxido de carbono equivalente
+            </span>
+
+          </div>
+
+          <div class="detalhe-indicador">
+
+            <strong>ASG</strong>
+
+            <span>
+              Apoio à gestão ambiental,
+              social e de governança
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         02 - CONTEXTO E ATUAÇÃO
+    ====================================== -->
+
+    <section class="detalhe-secao"
+             id="contexto">
+
+      <div class="container detalhe-duas-colunas">
+
+        <div>
+
+          <span class="detalhe-etiqueta">
+            01 / CONTEXTO E ATUAÇÃO
+          </span>
+
+          <h2>
+            Medir emissões
+            é o primeiro passo
+            para <em>gerenciar o carbono.</em>
+          </h2>
+
+          <div class="detalhe-destaque-texto">
+            Transformar dados dispersos
+            em informações organizadas
+            para melhorar o acompanhamento
+            das emissões e o planejamento
+            das ações climáticas.
+          </div>
+
+        </div>
+
+
+        <div class="detalhe-texto">
+
+          <h3>
+            O desafio da gestão de emissões
+          </h3>
+
+          <p>
+            Organizações de diferentes
+            setores precisam compreender
+            os impactos climáticos
+            de suas atividades para
+            planejar medidas de redução
+            de emissões e comunicar
+            seus compromissos ambientais.
+          </p>
+
+          <p>
+            Para isso, é necessário reunir
+            informações relacionadas
+            ao consumo de combustíveis,
+            energia elétrica,
+            transporte, processos
+            produtivos e outras
+            atividades que podem gerar
+            gases de efeito estufa.
+          </p>
+
+          <p>
+            A elaboração de um inventário
+            exige organização dos dados,
+            aplicação de fatores de emissão
+            adequados e critérios
+            metodológicos consistentes.
+            Quando essas tarefas são
+            realizadas de forma manual
+            e descentralizada, aumentam
+            as dificuldades de conferência,
+            atualização e acompanhamento
+            das informações.
+          </p>
+
+
+          <h3>
+            A proposta do INCT CO₂ Zero
+          </h3>
+
+          <p>
+            O INCT CO₂ Zero propõe
+            uma solução tecnológica
+            que reúne recursos
+            de cadastro, processamento
+            de dados e apresentação
+            de resultados para apoiar
+            a elaboração de inventários
+            corporativos e institucionais
+            de gases de efeito estufa.
+          </p>
+
+          <p>
+            A plataforma é concebida
+            para organizar as informações
+            conforme as categorias
+            de emissão e facilitar
+            a realização dos cálculos
+            em dióxido de carbono
+            equivalente (CO₂e).
+          </p>
+
+          <p>
+            O projeto também considera
+            a utilização dos dados
+            para apoiar relatórios
+            de sustentabilidade,
+            análise de indicadores
+            e planejamento de estratégias
+            de gestão climática.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         03 - FUNCIONALIDADES DA SOLUÇÃO
+    ====================================== -->
+
+    <section class="detalhe-frentes"
+             id="acoes">
+
+      <div class="container">
+
+        <div class="detalhe-frentes-cabecalho">
+
+          <span class="detalhe-etiqueta">
+            02 / SOLUÇÃO DIGITAL
+          </span>
+
+          <h2>
+            Dados organizados,
+            cálculos estruturados
+            e <em>gestão inteligente.</em>
+          </h2>
+
+          <p>
+            A proposta tecnológica está
+            organizada em três frentes
+            complementares: coleta
+            de informações, processamento
+            das emissões e apresentação
+            dos resultados ambientais.
+          </p>
+
+        </div>
+
+
+        <div class="detalhe-frentes-grid">
+
+          <!-- ORGANIZAÇÃO DOS DADOS -->
+
+          <article class="detalhe-frente">
+
+            <span>01 / GESTÃO DE INFORMAÇÕES</span>
+
+            <h3>
+              Cadastro e organização
+              dos dados ambientais
+            </h3>
+
+            <p>
+              Estruturação de um ambiente
+              digital para registrar
+              informações de consumo
+              energético, combustíveis,
+              transportes e outras
+              atividades relevantes
+              para o inventário
+              de emissões.
+            </p>
+
+            <p>
+              A organização por categorias
+              e períodos de referência
+              busca melhorar a rastreabilidade
+              e facilitar a atualização
+              das informações utilizadas
+              nos cálculos.
+            </p>
+
+          </article>
+
+
+          <!-- CÁLCULOS DE EMISSÕES -->
+
+          <article class="detalhe-frente">
+
+            <span>02 / PROCESSAMENTO DE DADOS</span>
+
+            <h3>
+              Cálculo e classificação
+              das emissões
+            </h3>
+
+            <p>
+              Desenvolvimento de recursos
+              para aplicar fatores de emissão
+              e calcular quantidades
+              de gases de efeito estufa
+              a partir dos dados
+              das atividades cadastradas.
+            </p>
+
+            <p>
+              A proposta contempla
+              a classificação por fontes
+              e escopos de emissão,
+              com resultados expressos
+              em CO₂ equivalente,
+              conforme metodologias
+              de inventário aplicáveis.
+            </p>
+
+          </article>
+
+
+          <!-- RELATÓRIOS E INDICADORES -->
+
+          <article class="detalhe-frente">
+
+            <span>03 / INTELIGÊNCIA AMBIENTAL</span>
+
+            <h3>
+              Relatórios, indicadores
+              e acompanhamento
+            </h3>
+
+            <p>
+              Desenvolvimento de painéis
+              e relatórios que facilitem
+              a interpretação dos resultados,
+              a identificação das principais
+              fontes emissoras e a comparação
+              de informações entre períodos.
+            </p>
+
+            <p>
+              Esses recursos podem
+              contribuir para a definição
+              de prioridades de redução,
+              o acompanhamento de metas
+              ambientais e a comunicação
+              de indicadores de
+              sustentabilidade.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         04 - INOVAÇÃO E APLICAÇÃO
+    ====================================== -->
+
+    <section class="detalhe-final">
+
+      <div class="container detalhe-final-grid">
+
+        <div>
+
+          <span class="detalhe-etiqueta">
+            03 / INOVAÇÃO E SUSTENTABILIDADE
+          </span>
+
+          <h2>
+            Tecnologia para
+            uma gestão climática
+            <em>mais eficiente.</em>
+          </h2>
+
+          <p>
+            O Software de Inventário
+            de Carbono aproxima
+            ferramentas digitais
+            e conhecimento técnico
+            para apoiar organizações
+            no acompanhamento
+            de seus impactos climáticos.
+          </p>
+
+          <p>
+            Ao facilitar a organização
+            e a análise de informações
+            sobre emissões, a solução
+            apresenta potencial
+            para tornar os processos
+            de gestão do carbono
+            mais acessíveis, consistentes
+            e úteis ao planejamento
+            de práticas sustentáveis.
+          </p>
+
+        </div>
+
+
+        <div class="detalhe-acoes-finais">
+
+          <a href="todos-projetos.html"
+             class="detalhe-botao">
+            Ver todos os projetos ↗
+          </a>
+
+          <a href="../index.html#contato"
+             class="detalhe-link">
+            Entre em contato
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================
+       RODAPÉ PADRÃO
+  ====================================== -->
+
+<!-- =====================================
+     RODAPÉ PADRÃO - INCT CO2 ZERO
+     PÁGINAS INTERNAS
+====================================== -->
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <div class="footer-top">
+
+      <!-- LOGO E DESCRIÇÃO -->
+
+      <div>
+
+        <img
+          src="../assets/img/logo-inct.svg"
+          alt="Logo INCT CO2 Zero"
+          class="footer-logo">
+
+        <p>
+          Ciência, tecnologia e inovação para
+          promover o desenvolvimento sustentável
+          e contribuir para um futuro equilibrado.
+        </p>
+
+      </div>
+
+
+      <!-- NAVEGAÇÃO -->
+
+      <div>
+
+        <h4>Navegação</h4>
+
+        <div class="footer-links">
+
+          <a href="../index.html#inicio">
+            Início
+          </a>
+
+          <a href="instituto.html">
+            O Instituto
+          </a>
+
+          <a href="atuacao.html">
+            Atuação
+          </a>
+
+          <a href="projetos.html">
+            Projetos
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- INSTITUCIONAL -->
+
+      <div>
+
+        <h4>Institucional</h4>
+
+        <div class="footer-links">
+
+          <a href="nit.html">
+            NIT
+          </a>
+
+          <a href="../index.html#programa">
+            Pense e Compense
+          </a>
+
+          <a href="../index.html#agenda">
+            Agenda 2030
+          </a>
+
+          <a href="../index.html#contato">
+            Contato
+          </a>
+
+          <a href="#">
+            Voltar ao topo ↑
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PARTE INFERIOR DO RODAPÉ -->
+
+    <div class="footer-bottom">
+
+      <span>
+        © <span id="year"></span>
+        INCT CO₂ Zero.
+        Todos os direitos reservados.
+      </span>
+
+      <span>
+        Ciência • Tecnologia • Sustentabilidade
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  <script src="../js/main.js"></script>
+
+</body>
+</html>

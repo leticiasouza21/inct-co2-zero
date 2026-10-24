@@ -1,0 +1,881 @@
+
+/* ==========================================
+   INCT CO2 ZERO
+   ESTILOS GLOBAIS DO SITE
+========================================== */
+
+
+/* ==========================================
+   1. IDENTIDADE VISUAL
+========================================== */
+
+:root {
+  --navy: #091e31;
+  --navy-light: #123751;
+
+  --green: #218a65;
+  --green-dark: #176b4d;
+  --green-light: #7fe0b1;
+
+  --white: #ffffff;
+  --background: #f4f7f6;
+
+  --text: #173247;
+  --muted: #637782;
+  --border: #e0e9e7;
+
+  --container-width: 1200px;
+}
+
+
+/* ==========================================
+   2. RESET E CONFIGURAÇÕES GERAIS
+========================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  background: var(--white);
+  color: var(--text);
+
+  font-family: 'DM Sans', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Manrope', Arial, sans-serif;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: min(
+    var(--container-width),
+    calc(100% - 48px)
+  );
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ==========================================
+   3. TÍTULOS E COMPONENTES COMPARTILHADOS
+========================================== */
+
+.section {
+  padding: 110px 0;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.tag::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+
+  background: currentColor;
+  border-radius: 50%;
+}
+
+.tag.light {
+  color: var(--green-light);
+}
+
+.section-title {
+  margin-top: 18px;
+
+  font-size: clamp(32px, 4vw, 52px);
+  letter-spacing: -2px;
+  line-height: 1.2;
+}
+
+.section-title span {
+  color: var(--green);
+}
+
+.section-description {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 50px;
+  margin-bottom: 48px;
+}
+
+.section-heading .section-description {
+  max-width: 350px;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+
+  margin-top: 14px;
+  padding-bottom: 12px;
+
+  color: var(--green);
+  border-bottom: 1px solid var(--green);
+
+  font-size: 13px;
+  font-weight: 800;
+
+  transition: gap 0.3s ease;
+}
+
+.text-link:hover {
+  gap: 32px;
+}
+
+
+/* ==========================================
+   4. BOTÕES GERAIS
+========================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  padding: 17px 25px;
+  min-height: 54px;
+
+  border-radius: 5px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn-green {
+  background: var(--green);
+  color: var(--white);
+}
+
+.btn-green:hover {
+  background: var(--green-dark);
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.55);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+
+/* ==========================================
+   5. CABEÇALHO INSTITUCIONAL
+========================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  background: rgba(255,255,255,0.98);
+  border-bottom: 1px solid var(--border);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 86px;
+  gap: 24px;
+}
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  width: 145px;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 100%;
+  max-height: 64px;
+  object-fit: contain;
+}
+
+
+/* ==========================================
+   6. MENU PRINCIPAL
+========================================== */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: clamp(10px, 1.3vw, 23px);
+  min-width: 0;
+}
+
+.main-nav a {
+  display: inline-flex;
+  align-items: center;
+
+  white-space: nowrap;
+
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--green);
+}
+
+/* PÁGINA ATIVA */
+
+.main-nav .nav-current,
+.main-nav a[aria-current="page"] {
+  color: var(--green);
+}
+
+/* BOTÃO CONTATO */
+
+.main-nav .header-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  min-height: 44px;
+  padding: 12px 17px;
+
+  background: var(--green);
+  color: var(--white);
+
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.main-nav .header-button:hover {
+  background: var(--green-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   7. BOTÃO DO MENU MOBILE
+========================================== */
+
+.menu-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  border: 0;
+  background: transparent;
+  color: var(--navy);
+
+  font-size: 28px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  color: var(--green);
+}
+
+
+/* ==========================================
+   8. RODAPÉ INSTITUCIONAL
+========================================== */
+
+.site-footer {
+  background: #061827;
+  color: var(--white);
+
+  padding: 65px 0 25px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+
+  gap: 65px;
+  padding-bottom: 60px;
+}
+
+.footer-logo {
+  max-width: 145px;
+  padding: 8px;
+  margin-bottom: 23px;
+
+  background: var(--white);
+  border-radius: 5px;
+}
+
+.footer-top p {
+  max-width: 300px;
+
+  color: #adc2ca;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.footer-top h4 {
+  color: var(--white);
+  font-size: 15px;
+  margin-bottom: 22px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.footer-links a {
+  color: #adc2ca;
+  font-size: 13px;
+
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--green-light);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 15px;
+  padding-top: 23px;
+
+  border-top: 1px solid #264053;
+
+  color: #9cb4c0;
+  font-size: 11px;
+}
+
+
+/* ==========================================
+   9. ANIMAÇÕES COMPARTILHADAS
+========================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ==========================================
+   10. ACESSIBILIDADE
+========================================== */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--green-light);
+  outline-offset: 4px;
+}
+
+
+/* ==========================================
+   11. RESPONSIVIDADE - MENU
+========================================== */
+
+/*
+  Abaixo de 1180px, o menu vira
+  um botão para evitar que os
+  links e o contato sejam cortados.
+*/
+
+@media (max-width: 1180px) {
+
+  .header-content {
+    min-height: 86px;
+  }
+
+  .menu-button {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .main-nav {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    gap: 0;
+    padding: 18px 24px 25px;
+
+    background: var(--white);
+    border-top: 1px solid var(--border);
+
+    box-shadow:
+      0 20px 35px rgba(9,30,49,0.12);
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .main-nav a {
+    width: 100%;
+    padding: 14px 15px;
+
+    font-size: 14px;
+    white-space: normal;
+  }
+
+  .main-nav .header-button {
+    width: 100%;
+    margin-top: 12px;
+
+    padding: 16px;
+    justify-content: center;
+
+    font-size: 14px;
+  }
+}
+
+
+/* ==========================================
+   12. RESPONSIVIDADE - TABLETS
+========================================== */
+
+@media (max-width: 950px) {
+
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+}
+
+
+/* ==========================================
+   13. RESPONSIVIDADE - CELULARES
+========================================== */
+
+@media (max-width: 600px) {
+
+  .container {
+    width: calc(100% - 34px);
+  }
+
+  .section {
+    padding: 75px 0;
+  }
+
+  .section-title {
+    letter-spacing: -1.5px;
+  }
+
+  .header-content {
+    min-height: 76px;
+  }
+
+  .logo {
+    width: 128px;
+  }
+
+  .logo img {
+    max-height: 58px;
+  }
+
+  .main-nav {
+    max-height: calc(100dvh - 76px);
+    overflow-y: auto;
+    padding: 15px 17px 24px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}
+
+
+/* ==========================================
+   14. REDUÇÃO DE MOVIMENTO
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+}
+
+/* ========================================
+   MENU SUSPENSO - PROJETOS
+======================================== */
+
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-dropdown-topo {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.nav-dropdown-topo .nav-projetos-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* SETINHA */
+
+.nav-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 30px;
+  padding: 0;
+
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 19px;
+}
+
+.nav-dropdown-toggle span {
+  display: block;
+  transition: transform .25s ease;
+}
+
+.nav-dropdown:hover .nav-dropdown-toggle span,
+.nav-dropdown:focus-within .nav-dropdown-toggle span,
+.nav-dropdown.aberto .nav-dropdown-toggle span {
+  transform: rotate(180deg);
+}
+
+/* CAIXA SUSPENSA */
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: -14px;
+  z-index: 1000;
+
+  min-width: 235px;
+  padding: 9px;
+  border: 1px solid #dce8e1;
+  border-radius: 7px;
+
+  background: #fff;
+  box-shadow: 0 14px 35px rgba(9, 30, 49, .12);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(7px);
+  pointer-events: none;
+
+  transition:
+    opacity .2s ease,
+    transform .2s ease,
+    visibility .2s ease;
+}
+
+/* MOSTRAR AO PASSAR MOUSE,
+   USAR TECLADO OU CLICAR NA SETA */
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu,
+.nav-dropdown.aberto .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* LINK DENTRO DA CAIXA */
+
+.main-nav .nav-dropdown-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  padding: 12px 13px;
+  border-radius: 4px;
+
+  color: #102c3c;
+  background: transparent;
+
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    background .2s ease,
+    color .2s ease;
+}
+
+.main-nav .nav-dropdown-menu a:hover {
+  background: #edf6f0;
+  color: #187b55;
+}
+
+.nav-dropdown-menu a span {
+  color: #187b55;
+}
+
+/* CELULAR E TABLET */
+
+@media (max-width: 900px) {
+
+  .nav-dropdown {
+    display: block;
+    width: 100%;
+  }
+
+  .nav-dropdown-topo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav-dropdown-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-dropdown-menu {
+    position: static;
+    display: none;
+
+    width: 100%;
+    min-width: 0;
+    margin: 5px 0 10px;
+    padding: 5px 0 5px 13px;
+
+    border: none;
+    border-left: 2px solid #228d60;
+    border-radius: 0;
+    box-shadow: none;
+
+    background: transparent;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu {
+    display: none;
+  }
+
+  .nav-dropdown.aberto .nav-dropdown-menu,
+  .nav-dropdown.aberto:hover .nav-dropdown-menu,
+  .nav-dropdown.aberto:focus-within .nav-dropdown-menu {
+    display: block;
+  }
+
+  .main-nav .nav-dropdown-menu a {
+    padding: 11px 12px;
+    white-space: normal;
+  }
+
+}
+
+/* =====================================
+   CORREÇÃO DA SETA DE PROJETOS
+===================================== */
+
+.main-nav .nav-dropdown {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+}
+
+.main-nav .nav-dropdown-topo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2px;
+  width: auto;
+}
+
+.main-nav .nav-projetos-link {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  margin: 0;
+}
+
+.main-nav .nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 16px;
+  width: 16px;
+  height: 24px;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 17px;
+  line-height: 1;
+}
+
+/* NO CELULAR */
+
+@media (max-width: 900px) {
+
+  .main-nav .nav-dropdown {
+    display: block;
+    width: 100%;
+  }
+
+  .main-nav .nav-dropdown-topo {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    width: 100%;
+  }
+
+  .main-nav .nav-dropdown-toggle {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 35px;
+  }
+
+}

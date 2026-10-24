@@ -1,0 +1,12 @@
+INCT CO2 ZERO — PRIMEIRA ETAPA
+
+Este pacote é uma NOVA BASE para o projeto, não a migração completa das páginas.
+Inclui: Home em index.html; CSS em css/style.css; JavaScript em js/main.js; imagens reaproveitadas em assets/img/.
+
+COMO ABRIR NO VS CODE:
+1. Extraia o ZIP.
+2. Copie todos os arquivos e pastas para sua pasta INCT-CO2-ZERO (que está vazia).
+3. Abra index.html com a extensão Live Server, ou diretamente no navegador.
+4. O menu funciona também no celular; os links da Home apontam para seções existentes.
+
+ATENÇÃO: é um protótipo. Textos, dados de contato, imagens e informações de projetos devem ser revisados e aprovados pela instituição antes de publicar. As outras páginas e formulários ainda serão migrados.

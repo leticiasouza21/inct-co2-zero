@@ -1,0 +1,982 @@
+
+/* ==========================================
+   INCT CO2 ZERO - PROJETOS
+   IDENTIDADE VISUAL INSTITUCIONAL
+========================================== */
+
+/* ELEMENTOS GERAIS */
+
+.projetos-etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.projetos-etiqueta::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+}
+
+.projetos-etiqueta.clara {
+  color: #a1ebc2;
+}
+
+.projetos-titulo {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(32px, 3.8vw, 52px);
+  line-height: 1.18;
+  letter-spacing: -2px;
+  color: var(--navy);
+}
+
+.projetos-titulo em {
+  color: var(--green);
+  font-style: normal;
+}
+
+/* ==========================================
+   01 - ABERTURA
+========================================== */
+
+.projetos-hero {
+  padding: 72px 0;
+  background: #f2f7f4;
+}
+
+.projetos-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.projetos-hero-conteudo h1 {
+  max-width: 740px;
+  margin: 25px 0;
+  font-size: clamp(38px, 4.6vw, 62px);
+  line-height: 1.16;
+  letter-spacing: -2.5px;
+  color: var(--navy);
+}
+
+.projetos-hero-conteudo h1 em {
+  color: var(--green);
+  font-style: normal;
+}
+
+.projetos-hero-conteudo > p {
+  max-width: 530px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.projetos-link-destaque {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 30px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid var(--green);
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.projetos-hero-imagem {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #dfe9e3;
+}
+
+.projetos-hero-imagem img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+/* ==========================================
+   02 - APRESENTAÇÃO DOS PROJETOS
+========================================== */
+
+.projetos-apresentacao {
+  padding: 105px 0;
+  background: #fff;
+}
+
+.projetos-apresentacao-grid {
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.projetos-apresentacao h2 {
+  margin: 23px 0 30px;
+}
+
+.projetos-marca-editorial {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border);
+}
+
+.projetos-marca-editorial strong {
+  color: var(--green);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.projetos-marca-editorial span {
+  color: #a2b8ab;
+  font-weight: 700;
+}
+
+.projetos-apresentacao-texto h3 {
+  margin-bottom: 22px;
+  color: var(--navy);
+  font-size: 23px;
+  line-height: 1.4;
+  letter-spacing: -.5px;
+}
+
+.projetos-apresentacao-texto > p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.95;
+  margin-bottom: 19px;
+}
+
+.projetos-frase {
+  margin-top: 28px;
+  padding: 24px 27px;
+  background: #edf6f0;
+  border-left: 3px solid var(--green);
+  color: #245645;
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 700;
+}
+
+/* ==========================================
+   03 - ÁREAS DE ATUAÇÃO
+========================================== */
+
+.projetos-areas {
+  padding: 100px 0;
+  background: #f3f7f4;
+}
+
+.projetos-cabecalho-central {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.projetos-cabecalho-central h2 {
+  margin: 20px 0;
+}
+
+.projetos-cabecalho-central > p {
+  max-width: 640px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.projetos-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.projetos-area-card {
+  display: flex;
+  flex-direction: column;
+  padding: 34px 30px;
+  min-height: 365px;
+  background: #fff;
+  border: 1px solid #e0e9e3;
+  border-top: 3px solid var(--green);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.projetos-area-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 45px rgba(8, 40, 35, .07);
+}
+
+.projetos-area-numero {
+  color: #769988;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.projetos-area-icone {
+  display: grid;
+  place-items: center;
+  width: 59px;
+  height: 59px;
+  margin: 22px 0;
+  background: #e6f4eb;
+  border-radius: 12px;
+  color: var(--green);
+}
+
+.projetos-area-icone svg {
+  width: 28px;
+  height: 28px;
+}
+
+.projetos-area-card h3 {
+  margin-bottom: 14px;
+  color: var(--navy);
+  font-size: 21px;
+}
+
+.projetos-area-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.projetos-area-card a {
+  display: inline-flex;
+  gap: 15px;
+  margin-top: auto;
+  padding-top: 25px;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* ==========================================
+   04 - COMO OS PROJETOS SÃO ESTRUTURADOS
+========================================== */
+
+.projetos-metodo {
+  padding: 105px 0;
+  background:
+    radial-gradient(
+      circle at 85% 12%,
+      rgba(40, 153, 119, .17),
+      transparent 43%
+    ),
+    #091e31;
+  color: #fff;
+}
+
+.projetos-metodo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+}
+
+.projetos-metodo h2 {
+  margin: 23px 0;
+  color: #fff;
+}
+
+.projetos-metodo h2 em {
+  color: #9ae9be;
+}
+
+.projetos-metodo-intro p {
+  max-width: 540px;
+  color: #bed4da;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.projetos-metodo-etapas {
+  display: flex;
+  flex-direction: column;
+}
+
+.projetos-metodo-item {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 18px;
+  padding: 23px 0;
+  border-bottom: 1px solid rgba(255,255,255,.16);
+}
+
+.projetos-metodo-item:first-child {
+  padding-top: 0;
+}
+
+.projetos-metodo-item > span {
+  color: #9ae9be;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.projetos-metodo-item h3 {
+  color: #fff;
+  margin-bottom: 9px;
+  font-size: 18px;
+}
+
+.projetos-metodo-item p {
+  color: #b8ced8;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* ==========================================
+   05 - PROJETOS EM DESTAQUE
+========================================== */
+
+.projetos-destaque {
+  padding: 110px 0;
+  background: #fff;
+}
+
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.projeto-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #dce8e2;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.projeto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(10, 45, 35, .07);
+}
+
+.projeto-card-imagem {
+  height: 270px;
+  overflow: hidden;
+  background: #e0e9e3;
+}
+
+.projeto-card-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .45s;
+}
+
+.projeto-card:hover img {
+  transform: scale(1.04);
+}
+
+.projeto-card-corpo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 32px;
+}
+
+.projeto-card-categoria {
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.25px;
+}
+
+.projeto-card h3 {
+  color: var(--navy);
+  font-size: clamp(22px, 2.4vw, 28px);
+  letter-spacing: -.7px;
+  line-height: 1.35;
+  margin: 17px 0 12px;
+}
+
+.projeto-card-local {
+  color: #779389;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .8px;
+  margin-bottom: 22px;
+}
+
+.projeto-card-corpo > p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.projeto-detalhes {
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+}
+
+.projeto-detalhes summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+  list-style: none;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.projeto-detalhes summary::-webkit-details-marker {
+  display: none;
+}
+
+.projeto-detalhes summary span {
+  font-size: 20px;
+  transition: transform .25s;
+}
+
+.projeto-detalhes[open] summary span {
+  transform: rotate(45deg);
+}
+
+.projeto-detalhes > p {
+  padding-top: 17px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* ==========================================
+   06 - COOPERAÇÃO
+========================================== */
+
+.projetos-cooperacao {
+  padding: 100px 0;
+  background: #eef6f1;
+}
+
+.projetos-cooperacao-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 90px;
+}
+
+.projetos-cooperacao h2 {
+  margin-top: 23px;
+}
+
+.projetos-cooperacao-grid > div:last-child p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+.projetos-botao-final {
+  display: inline-flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 16px;
+  padding: 17px 23px;
+  border-radius: 5px;
+  background: var(--green);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  transition: background .25s;
+}
+
+.projetos-botao-final:hover {
+  background: var(--green-dark);
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 1000px) {
+  .projetos-hero-grid,
+  .projetos-apresentacao-grid,
+  .projetos-metodo-grid,
+  .projetos-cooperacao-grid {
+    gap: 45px;
+  }
+
+  .projetos-areas-grid {
+    gap: 12px;
+  }
+
+  .projetos-area-card {
+    padding: 28px 22px;
+  }
+}
+
+@media (max-width: 800px) {
+  .projetos-hero-grid,
+  .projetos-apresentacao-grid,
+  .projetos-metodo-grid,
+  .projetos-cooperacao-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projetos-hero-imagem img {
+    height: 280px;
+  }
+
+  .projetos-areas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projetos-area-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .projetos-hero {
+    padding: 55px 0;
+  }
+
+  .projetos-hero-conteudo h1 {
+    font-size: 39px;
+    letter-spacing: -1.6px;
+  }
+
+  .projetos-hero-conteudo > p {
+    font-size: 14px;
+  }
+
+  .projetos-apresentacao,
+  .projetos-areas,
+  .projetos-metodo,
+  .projetos-destaque,
+  .projetos-cooperacao {
+    padding: 75px 0;
+  }
+
+  .projetos-titulo {
+    letter-spacing: -1.3px;
+  }
+
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projeto-card-imagem {
+    height: 230px;
+  }
+
+  .projeto-card-corpo {
+    padding: 25px;
+  }
+
+  .projetos-cabecalho-central {
+    margin-bottom: 35px;
+  }
+
+  .projetos-metodo-item {
+    gap: 12px;
+  }
+}
+/* ==========================================
+   PROJETOS - CARDS MAIS COMPACTOS
+========================================== */
+
+.projetos-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.projeto-card-imagem {
+  height: 185px;
+}
+
+.projeto-card-corpo {
+  padding: 22px 25px;
+}
+
+.projeto-card h3 {
+  font-size: 22px;
+  margin: 12px 0 8px;
+  line-height: 1.3;
+}
+
+.projeto-card-local {
+  margin-bottom: 13px;
+}
+
+.projeto-card-corpo > p {
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* Mostra apenas o primeiro parágrafo
+   da descrição principal do projeto */
+
+.projeto-card-corpo > p:nth-of-type(n+2) {
+  display: none;
+}
+
+.projeto-detalhes {
+  padding-top: 13px;
+  margin-top: 13px;
+}
+
+.projeto-detalhes summary {
+  font-size: 12px;
+}
+
+/* CELULARES */
+
+@media (max-width: 650px) {
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projeto-card-imagem {
+    height: 190px;
+  }
+
+  .projeto-card-corpo {
+    padding: 20px;
+  }
+}
+
+/* ==========================================
+   PROJETOS - QUATRO CARDS EM UMA FILEIRA
+========================================== */
+
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.projeto-card {
+  border: 1px solid #e0e9e4;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: none;
+}
+
+.projeto-card > img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+.projeto-card-corpo {
+  padding: 20px;
+}
+
+.projeto-card h3 {
+  font-size: 17px;
+  line-height: 1.35;
+  margin: 12px 0;
+  letter-spacing: -.4px;
+}
+
+.projeto-card-corpo > p {
+  font-size: 12px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.projeto-card-categoria {
+  font-size: 10px;
+}
+
+/* BOTÃO VER TODOS */
+
+.projetos-ver-todos-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.projetos-ver-todos {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+
+  padding: 15px 25px;
+  border-radius: 5px;
+
+  background: var(--green);
+  color: white;
+
+  font-size: 13px;
+  font-weight: 800;
+  transition: background .3s;
+}
+
+.projetos-ver-todos:hover {
+  background: var(--green-dark);
+}
+
+/* TABLETS */
+
+@media (max-width: 950px) {
+  .projetos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projeto-card > img {
+    height: 195px;
+  }
+}
+
+/* ==========================================
+   AJUSTES - PÁGINA PROJETOS
+   SEÇÕES MAIS COMPACTAS
+========================================== */
+
+/* ABERTURA */
+
+.projetos-hero {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  min-height: 0;
+}
+
+.projetos-hero-grid {
+  gap: 45px;
+}
+
+.projetos-hero-imagem img {
+  max-height: 340px;
+  object-fit: cover;
+}
+
+
+/* APRESENTAÇÃO DO INCT */
+
+.projetos-apresentacao {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  min-height: 0;
+}
+
+.projetos-apresentacao-grid {
+  gap: 45px;
+}
+
+.projetos-apresentacao-texto p {
+  margin-bottom: 13px;
+  line-height: 1.75;
+}
+
+.projetos-frase {
+  margin-top: 20px;
+}
+
+
+/* TRÊS ÁREAS DE ATUAÇÃO */
+
+.projetos-areas {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  min-height: 0;
+}
+
+.projetos-cabecalho-central {
+  margin-bottom: 28px;
+}
+
+.projetos-areas-grid {
+  gap: 18px;
+}
+
+.projetos-area-card {
+  min-height: 0;
+  height: auto;
+  padding: 24px;
+}
+
+.projetos-area-numero {
+  margin-bottom: 12px;
+}
+
+.projetos-area-icone {
+  margin-bottom: 13px;
+}
+
+.projetos-area-card h3 {
+  margin-bottom: 10px;
+}
+
+.projetos-area-card p {
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+
+/* OS CARDS NÃO SÃO LINKS */
+
+.projetos-area-card {
+  cursor: default;
+  transform: none;
+}
+
+.projetos-area-card:hover {
+  transform: none;
+}
+
+
+/* COMO OS PROJETOS SÃO DESENVOLVIDOS */
+
+.projetos-metodo {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  min-height: 0;
+}
+
+.projetos-metodo-grid {
+  gap: 48px;
+}
+
+.projetos-metodo-etapas {
+  gap: 13px;
+}
+
+.projetos-metodo-item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.projetos-metodo-item p {
+  line-height: 1.7;
+}
+
+
+/* PROJETOS EM DESTAQUE */
+
+.projetos-destaque {
+  padding-top: 65px;
+  padding-bottom: 70px;
+  min-height: 0;
+}
+
+.projetos-grid {
+  gap: 17px;
+}
+
+.projeto-card {
+  min-height: 0;
+  height: auto;
+}
+
+.projeto-card img {
+  height: 175px;
+  object-fit: cover;
+}
+
+.projeto-card-corpo {
+  padding: 19px;
+}
+
+.projeto-card-corpo h3 {
+  margin-bottom: 8px;
+}
+
+.projeto-card-corpo p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.projetos-ver-todos-area {
+  margin-top: 27px;
+}
+
+
+/* TÍTULOS E ESPAÇAMENTOS */
+
+.projetos-titulo {
+  line-height: 1.2;
+}
+
+.projetos-cabecalho-central > p {
+  line-height: 1.75;
+}
+
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+  .projetos-hero,
+  .projetos-apresentacao,
+  .projetos-areas,
+  .projetos-metodo,
+  .projetos-destaque {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .projetos-hero-grid,
+  .projetos-apresentacao-grid,
+  .projetos-metodo-grid {
+    gap: 30px;
+  }
+
+  .projetos-area-card {
+    padding: 20px;
+  }
+}
+
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+  .projetos-hero,
+  .projetos-apresentacao,
+  .projetos-areas,
+  .projetos-metodo,
+  .projetos-destaque {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .projetos-hero-imagem img {
+    max-height: 230px;
+  }
+
+  .projetos-area-card {
+    padding: 20px;
+  }
+
+  .projeto-card img {
+    height: 190px;
+  }
+
+  .projetos-cabecalho-central {
+    margin-bottom: 23px;
+  }
+
+}
+

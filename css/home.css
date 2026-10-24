@@ -758,3 +758,104 @@
     padding: 25px;
   }
 }
+/* ==========================================
+   CONTATO - COMPLEMENTOS
+========================================== */
+
+.contato-assuntos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 25px;
+}
+
+.contato-assuntos span {
+  padding: 9px 13px;
+  border: 1px solid #d4e6db;
+  border-radius: 30px;
+  background: #ffffff;
+  color: #276a50;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.contato-card-etiqueta {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.contact-box .contato-instituicao {
+  margin-bottom: 24px;
+}
+
+.contato-info {
+  padding: 17px 0;
+  border-top: 1px solid #e1ebe5;
+}
+
+.contato-info-titulo {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.contato-info p {
+  margin: 0 0 10px;
+  line-height: 1.75;
+}
+
+.contato-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.contato-link:hover {
+  text-decoration: underline;
+}
+
+.contato-telefone {
+  display: inline-block;
+  color: var(--green);
+  font-size: 21px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.contato-mensagem {
+  margin-top: 10px;
+  padding: 15px 17px;
+  background: #eef7f1;
+  border-left: 3px solid var(--green);
+  border-radius: 3px;
+}
+
+.contato-mensagem p {
+  margin: 0;
+  color: #285743;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .contato-assuntos {
+    gap: 7px;
+  }
+
+  .contato-assuntos span {
+    font-size: 10px;
+  }
+
+  .contato-telefone {
+    font-size: 19px;
+  }
+}

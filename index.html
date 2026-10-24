@@ -1,107 +1,205 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="INCT CO₂ Zero — ciência, tecnologia e inovação para um futuro sustentável.">
+
+  <meta name="description"
+    content="INCT CO₂ Zero — ciência, tecnologia e inovação para um futuro sustentável.">
+
   <title>INCT CO₂ Zero | Ciência que transforma o futuro</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/home.css">
+
+  <!-- ESTILOS DOS LINKS DOS PROJETOS -->
+  <style>
+    .projects-grid > .home-project-link {
+      display: block;
+      height: 100%;
+      color: inherit;
+      text-decoration: none;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .projects-grid > .home-project-link:hover {
+      transform: translateY(-5px);
+      border-color: #238e67;
+      box-shadow: 0 12px 30px rgba(6, 37, 30, 0.10);
+    }
+
+    .home-project-link:focus-visible,
+    .projetos-home-botao:focus-visible {
+      outline: 3px solid #18845f;
+      outline-offset: 4px;
+    }
+
+    .projetos-home-acao {
+      display: flex;
+      justify-content: center;
+      margin-top: 36px;
+    }
+
+    .projetos-home-botao {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 15px 27px;
+      border-radius: 7px;
+      background: #18865f;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .projetos-home-botao:hover {
+      background: #106b4b;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 600px) {
+      .projetos-home-botao {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+
 </head>
+
 <body>
 
-  <!-- CABEÇALHO -->
+  <!-- =====================================
+       CABEÇALHO
+  ====================================== -->
+
   <header class="site-header">
+
     <div class="container header-content">
-      <a href="#inicio" class="logo" aria-label="INCT CO2 Zero - início">
-        <img src="assets/img/logo-inct.svg" alt="Logo do INCT CO2 Zero">
-      </a>
 
-      <button class="menu-button" id="menuButton"
-        aria-label="Abrir menu" aria-expanded="false"
-        aria-controls="menu" type="button">☰</button>
+      <a href="#inicio"
+         class="logo"
+         aria-label="INCT CO2 Zero - início">
 
-      
+        <img
+          src="assets/img/logo-inct.svg"
+          alt="Logo do INCT CO2 Zero">
 
-
-
-<nav id="menu"
-     class="main-nav"
-     aria-label="Navegação principal">
-
-  <a href="#inicio">
-    Início
-  </a>
-
-  <a href="paginas/instituto.html">
-    O Instituto
-  </a>
-
-  <a href="paginas/atuacao.html">
-    Atuação
-  </a>
-
-  <!-- MENU SUSPENSO DE PROJETOS -->
-
-  <div class="nav-dropdown">
-
-    <div class="nav-dropdown-topo">
-
-      <a href="paginas/projetos.html"
-         class="nav-projetos-link">
-        Projetos
       </a>
 
       <button
-        type="button"
-        class="nav-dropdown-toggle"
-        aria-label="Mostrar opções de projetos"
+        class="menu-button"
+        id="menuButton"
+        aria-label="Abrir menu"
         aria-expanded="false"
-        aria-controls="submenu-projetos">
+        aria-controls="menu"
+        type="button">
 
-        <span aria-hidden="true">⌄</span>
+        ☰
 
       </button>
 
+      <nav
+        id="menu"
+        class="main-nav"
+        aria-label="Navegação principal">
+
+        <a href="#inicio">
+          Início
+        </a>
+
+        <a href="paginas/instituto.html">
+          O Instituto
+        </a>
+
+        <a href="paginas/atuacao.html">
+          Atuação
+        </a>
+
+        <!-- MENU SUSPENSO DE PROJETOS -->
+
+        <div class="nav-dropdown">
+
+          <div class="nav-dropdown-topo">
+
+            <a
+              href="paginas/projetos.html"
+              class="nav-projetos-link">
+
+              Projetos
+
+            </a>
+
+            <button
+              type="button"
+              class="nav-dropdown-toggle"
+              aria-label="Mostrar opções de projetos"
+              aria-expanded="false"
+              aria-controls="submenu-projetos">
+
+              <span aria-hidden="true">⌄</span>
+
+            </button>
+
+          </div>
+
+          <div
+            class="nav-dropdown-menu"
+            id="submenu-projetos">
+
+            <a href="paginas/todos-projetos.html">
+
+              Portfólio de Projetos
+              <span aria-hidden="true">↗</span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <a href="paginas/nit.html">
+          NIT
+        </a>
+
+        <a href="#contato" class="header-button">
+          Contato ↗
+        </a>
+
+      </nav>
+
     </div>
 
-    <div class="nav-dropdown-menu"
-         id="submenu-projetos">
-
-      <a href="paginas/todos-projetos.html">
-        Portfólio de Projetos
-        <span aria-hidden="true">↗</span>
-      </a>
-
-    </div>
-
-  </div>
-
-  <a href="paginas/nit.html">
-    NIT
-  </a>
-
-  <a href="#contato"
-     class="header-button">
-    Contato ↗
-  </a>
-
-</nav>
-
-    </div>
   </header>
+
 
   <main>
 
-    <!-- INÍCIO -->
+    <!-- =====================================
+         INÍCIO
+    ====================================== -->
+
     <section class="hero" id="inicio">
+
       <div class="container hero-content">
+
         <span class="tag light">
           Ciência • Tecnologia • Sustentabilidade
         </span>
@@ -118,38 +216,58 @@
         </p>
 
         <div class="hero-actions">
+
           <a href="#instituto" class="btn btn-green">
             Conheça o INCT <span>↗</span>
           </a>
+
           <a href="#projetos" class="btn btn-outline">
             Explore nossos projetos <span>→</span>
           </a>
+
         </div>
+
       </div>
 
       <div class="hero-bottom">
+
         <div class="container hero-bottom-content">
+
           <p>
             INSTITUTO NACIONAL DE CIÊNCIA,
             TECNOLOGIA E INOVAÇÃO CO₂ ZERO
           </p>
+
           <span>#AVIDASÓEXISTENOEQUILÍBRIO</span>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- QUEM SOMOS -->
+
+    <!-- =====================================
+         QUEM SOMOS
+    ====================================== -->
+
     <section class="section" id="instituto">
+
       <div class="container intro-grid">
+
         <div class="reveal">
+
           <span class="tag">QUEM SOMOS</span>
+
           <h2 class="section-title">
             A ciência como caminho.
             <span>A sustentabilidade como compromisso.</span>
           </h2>
+
         </div>
 
         <div class="intro-description reveal">
+
           <p>
             O Instituto Nacional de Ciência, Tecnologia
             e Inovação CO₂ Zero é uma organização sem
@@ -157,122 +275,189 @@
             ao desenvolvimento de pesquisas, tecnologias
             e projetos socioambientais.
           </p>
+
           <p>
             Atuamos na integração entre ciência,
             inovação, práticas ASG e Objetivos de
             Desenvolvimento Sustentável, conectando
             instituições, governos, empresas e comunidades.
           </p>
+
           <p>
             Nosso propósito é transformar conhecimento
             em iniciativas capazes de gerar benefícios
             ambientais, sociais e econômicos.
           </p>
+
           <a href="#atuacao" class="text-link">
             Conheça nossas áreas de atuação <span>↗</span>
           </a>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- ÁREAS DE ATUAÇÃO -->
+
+    <!-- =====================================
+         ÁREAS DE ATUAÇÃO
+    ====================================== -->
+
     <section class="section expertise" id="atuacao">
+
       <div class="container">
+
         <div class="section-heading reveal">
+
           <div>
+
             <span class="tag">NOSSA EXPERTISE</span>
+
             <h2 class="section-title">
               Diferentes áreas.<br>
               <span>Um propósito em comum.</span>
             </h2>
+
           </div>
+
           <p class="section-description">
             Integramos pesquisa, responsabilidade
             socioambiental e soluções inovadoras
             para enfrentar desafios contemporâneos.
           </p>
+
         </div>
 
         <div class="expertise-grid">
+
           <article class="expertise-card reveal">
+
             <span class="card-number">01 / AMBIENTAL</span>
+
             <div class="expertise-icon">♧</div>
+
             <h3>Sustentabilidade climática</h3>
+
             <p>
               Gestão de gases de efeito estufa,
               iniciativas de baixo carbono e estratégias
               para enfrentar as mudanças climáticas.
             </p>
+
           </article>
 
+
           <article class="expertise-card reveal">
+
             <span class="card-number">02 / INOVAÇÃO</span>
+
             <div class="expertise-icon">⚙</div>
+
             <h3>Ciência e tecnologia</h3>
+
             <p>
               Pesquisa aplicada, desenvolvimento
               de soluções tecnológicas e inovação
               voltada à sustentabilidade.
             </p>
+
           </article>
 
+
           <article class="expertise-card reveal">
+
             <span class="card-number">03 / SOCIAL</span>
+
             <div class="expertise-icon">◎</div>
+
             <h3>Desenvolvimento social</h3>
+
             <p>
               Projetos com comunidades tradicionais
               e vulneráveis, valorizando inclusão,
               autonomia e geração de oportunidades.
             </p>
+
           </article>
 
+
           <article class="expertise-card reveal">
+
             <span class="card-number">04 / GOVERNANÇA</span>
+
             <div class="expertise-icon">◇</div>
+
             <h3>Gestão ASG</h3>
+
             <p>
               Apoio à integração de práticas
               ambientais, sociais e de governança
               em organizações e projetos.
             </p>
+
           </article>
 
+
           <article class="expertise-card reveal">
+
             <span class="card-number">05 / EDUCAÇÃO</span>
+
             <div class="expertise-icon">✳</div>
+
             <h3>Educação ambiental</h3>
+
             <p>
               Conscientização, capacitação e
               disseminação de conhecimentos
               sobre sustentabilidade.
             </p>
+
           </article>
 
+
           <article class="expertise-card reveal">
+
             <span class="card-number">06 / ECONOMIA CIRCULAR</span>
+
             <div class="expertise-icon">↻</div>
+
             <h3>Resíduos e baixo carbono</h3>
+
             <p>
               Estudos e soluções de gestão de resíduos,
               valorização de materiais e tecnologias
               de baixo carbono.
             </p>
+
           </article>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- PENSE E COMPENSE -->
+
+    <!-- =====================================
+         PENSE E COMPENSE
+    ====================================== -->
+
     <section class="programa-section" id="programa">
+
       <div class="container">
+
         <div class="programa-header reveal">
+
           <span class="tag light">PROGRAMA INSTITUCIONAL</span>
+
           <h2>PENSE E <span>COMPENSE.</span></h2>
+
           <p class="programa-subtitulo">
             Ciência, tecnologia e soluções estratégicas
             para a gestão de gases de efeito estufa.
           </p>
+
           <p class="programa-descricao">
             O Pense e Compense é um programa desenvolvido
             pelo INCT CO₂ Zero que integra conhecimento
@@ -280,417 +465,720 @@
             para apoiar a gestão das emissões de gases
             de efeito estufa (GEE).
           </p>
+
         </div>
 
+
         <div class="programa-etapas">
+
           <article class="programa-card reveal">
+
             <div class="programa-numero">01</div>
             <div class="programa-linha"></div>
+
             <h3>Diagnóstico</h3>
+
             <p>
               Identificação e análise das fontes
               de emissão de gases de efeito estufa,
               fornecendo informações para o
               planejamento ambiental.
             </p>
+
           </article>
 
+
           <article class="programa-card reveal">
+
             <div class="programa-numero">02</div>
             <div class="programa-linha"></div>
+
             <h3>Monitoramento</h3>
+
             <p>
               Coleta, compilação e acompanhamento
               dos dados relacionados às emissões
               para subsidiar decisões e estratégias.
             </p>
+
           </article>
 
+
           <article class="programa-card reveal">
+
             <div class="programa-numero">03</div>
             <div class="programa-linha"></div>
+
             <h3>Mitigação e adaptação</h3>
+
             <p>
               Desenvolvimento de estratégias para
               reduzir emissões e contribuir para o
               enfrentamento dos impactos das
               mudanças climáticas.
             </p>
+
           </article>
 
+
           <article class="programa-card reveal">
+
             <div class="programa-numero">04</div>
             <div class="programa-linha"></div>
+
             <h3>Compensação</h3>
+
             <p>
               Planejamento de ações de compensação
               de emissões, integradas às estratégias
               de responsabilidade socioambiental.
             </p>
+
           </article>
+
         </div>
 
+
         <div class="programa-footer">
+
           <p>
             <strong>Nosso compromisso:</strong>
             transformar conhecimento científico
             em estratégias para uma economia
             de baixo carbono.
           </p>
+
           <a href="#contato" class="programa-botao">
             Entre em contato <span>↗</span>
           </a>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- PROJETOS -->
+
+    <!-- =====================================
+         PROJETOS - CARDS CLICÁVEIS
+    ====================================== -->
+
     <section class="section" id="projetos">
+
       <div class="container">
+
         <div class="section-heading reveal">
+
           <div>
+
             <span class="tag">PROJETOS E INICIATIVAS</span>
+
             <h2 class="section-title">
               Nosso compromisso <span>em ação.</span>
             </h2>
+
           </div>
+
           <p class="section-description">
             Conheça iniciativas apresentadas
             no portfólio institucional do
             INCT CO₂ Zero de 2024.
           </p>
+
         </div>
 
+
         <div class="projects-grid">
-          <article class="project-card reveal">
+
+          <!-- PROJETO 1 - ARAGUARI -->
+
+          <a
+            href="paginas/projeto-araguari.html"
+            class="project-card home-project-link reveal"
+            aria-label="Conhecer o projeto O Voo do Araguari">
+
             <div class="project-image">
-              <img src="assets/img/projeto-araguari.jpeg"
-                alt="Projeto O Voo do Araguari" loading="lazy">
+
+              <img
+                src="assets/img/projeto-araguari.jpeg"
+                alt="Projeto O Voo do Araguari"
+                loading="lazy">
+
             </div>
+
             <div class="project-info">
+
               <span class="project-category">
                 AMAPÁ / COMUNIDADES RIBEIRINHAS
               </span>
+
               <h3>O Voo do Araguari</h3>
+
               <p>
                 Projeto voltado ao fortalecimento
                 de comunidades ribeirinhas por meio
                 de novas cadeias produtivas, alternativas
                 de renda e desenvolvimento sustentável.
               </p>
-            </div>
-          </article>
 
-          <article class="project-card reveal">
-            <div class="project-image">
-              <img src="assets/img/projeto-xikrin.png"
-                alt="Associação Indígena Berê Xikrin" loading="lazy">
             </div>
+
+          </a>
+
+
+          <!-- PROJETO 2 - BERÊ XIKRIN -->
+
+          <a
+            href="paginas/projeto-xikrin.html"
+            class="project-card home-project-link reveal"
+            aria-label="Conhecer o projeto Associação Berê Xikrin">
+
+            <div class="project-image">
+
+              <img
+                src="assets/img/projeto-xikrin.png"
+                alt="Associação Indígena Berê Xikrin"
+                loading="lazy">
+
+            </div>
+
             <div class="project-info">
+
               <span class="project-category">
                 PARÁ / POVOS INDÍGENAS
               </span>
+
               <h3>Associação Berê Xikrin</h3>
+
               <p>
                 Cooperação técnica para fortalecimento
                 institucional, proteção cultural e
                 desenvolvimento sustentável de comunidades
                 indígenas da Terra Indígena Trincheira Bacajá.
               </p>
-            </div>
-          </article>
 
-          <article class="project-card reveal">
-            <div class="project-image">
-              <img src="assets/img/projeto-piaui.png"
-                alt="Gestão de resíduos no Piauí" loading="lazy">
             </div>
+
+          </a>
+
+
+          <!-- PROJETO 3 - PIAUÍ -->
+
+          <a
+            href="paginas/isbpi-piaui.html"
+            class="project-card home-project-link reveal"
+            aria-label="Conhecer o projeto Gestão sustentável de resíduos">
+
+            <div class="project-image">
+
+              <img
+                src="assets/img/projeto-piaui.png"
+                alt="Gestão de resíduos no Piauí"
+                loading="lazy">
+
+            </div>
+
             <div class="project-info">
+
               <span class="project-category">
                 PIAUÍ / ECONOMIA CIRCULAR
               </span>
+
               <h3>Gestão sustentável de resíduos</h3>
+
               <p>
                 Iniciativa voltada à transição da
                 gestão de resíduos sólidos para modelos
                 sustentáveis, com estudos técnicos,
                 tecnologias de baixo carbono e inclusão social.
               </p>
+
             </div>
-          </article>
+
+          </a>
+
         </div>
+
+
+        <!-- BOTÃO PARA VER TODOS OS PROJETOS -->
+
+        <div class="projetos-home-acao">
+
+          <a
+            href="paginas/todos-projetos.html"
+            class="projetos-home-botao">
+
+            Ver todos os projetos
+            <span aria-hidden="true">→</span>
+
+          </a>
+
+        </div>
+
       </div>
+
     </section>
 
-    <!-- AGENDA 2030 -->
+
+    <!-- =====================================
+         AGENDA 2030
+    ====================================== -->
+
     <section class="agenda-section" id="agenda">
+
       <div class="container agenda-layout">
+
         <div class="agenda-content reveal">
+
           <span class="tag">COMPROMISSO COM O FUTURO</span>
+
           <h2 class="section-title">
             Uma visão global.
             <span>Um compromisso com a vida.</span>
           </h2>
+
           <p>
             O INCT CO₂ Zero atua alinhado aos
             Objetivos de Desenvolvimento Sustentável
             (ODS) da Agenda 2030 das Nações Unidas.
           </p>
+
           <p>
             Por meio da ciência, tecnologia, inovação
             e cooperação institucional, buscamos contribuir
             para soluções que integrem desenvolvimento
             econômico, inclusão social e proteção ambiental.
           </p>
+
           <p>
             A sustentabilidade exige uma abordagem
             integrada, conectando pessoas, planeta,
             prosperidade, paz e parcerias.
           </p>
+
           <a href="#projetos" class="text-link">
             Conheça nossas iniciativas <span>↗</span>
           </a>
+
         </div>
 
+
         <div class="agenda-visual reveal">
+
           <div class="agenda-visual-top">
+
             <span>AGENDA GLOBAL</span>
             <strong>2030</strong>
+
           </div>
 
           <div class="agenda-principios">
+
             <div class="agenda-principio">
+
               <span>01</span>
+
               <div>
                 <h3>Pessoas</h3>
                 <p>Dignidade, inclusão e igualdade.</p>
               </div>
+
             </div>
 
             <div class="agenda-principio">
+
               <span>02</span>
+
               <div>
                 <h3>Planeta</h3>
                 <p>Proteção ambiental e equilíbrio climático.</p>
               </div>
+
             </div>
 
             <div class="agenda-principio">
+
               <span>03</span>
+
               <div>
                 <h3>Prosperidade</h3>
                 <p>Desenvolvimento econômico sustentável.</p>
               </div>
+
             </div>
 
             <div class="agenda-principio">
+
               <span>04</span>
+
               <div>
                 <h3>Paz</h3>
                 <p>Sociedades justas e inclusivas.</p>
               </div>
+
             </div>
 
             <div class="agenda-principio">
+
               <span>05</span>
+
               <div>
                 <h3>Parcerias</h3>
                 <p>Cooperação para resultados coletivos.</p>
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- LEMA INSTITUCIONAL -->
+
+    <!-- =====================================
+         LEMA INSTITUCIONAL
+    ====================================== -->
+
     <section class="quote-section">
+
       <div class="container reveal">
+
         <span class="tag light">NOSSO LEMA</span>
+
         <h2>
           A vida só existe <span>no equilíbrio.</span>
         </h2>
+
         <p>
           Ciência, inovação e responsabilidade
           para as gerações presentes e futuras.
         </p>
+
       </div>
+
     </section>
 
-  
-<!-- =====================================
-     CONTATO - INCT CO2 ZERO
-====================================== -->
 
-<section class="section contact" id="contato">
+    <!-- =====================================
+         CONTATO
+    ====================================== -->
 
-  <div class="container contact-grid">
+    <section class="section contact" id="contato">
 
-    <!-- APRESENTAÇÃO -->
+      <div class="container contact-grid">
 
-    <div class="reveal">
+        <div class="reveal">
 
-      <span class="tag">
-        CONECTE-SE AO INCT
-      </span>
+          <span class="tag">CONECTE-SE AO INCT</span>
 
-      <h2 class="section-title">
-        Grandes transformações começam
-        com <span>boas parcerias.</span>
-      </h2>
+          <h2 class="section-title">
+            Grandes transformações começam
+            com <span>boas parcerias.</span>
+          </h2>
 
-      <p class="section-description">
-        Conheça nossas iniciativas e entre
-        em contato para explorar possibilidades
-        de colaboração em ciência,
-        sustentabilidade e inovação.
-      </p>
+          <p class="section-description">
+            Tem interesse em conhecer nossas iniciativas,
+            desenvolver projetos em parceria ou saber mais
+            sobre nossas áreas de atuação?
 
-    </div>
+            Entre em contato com o INCT CO₂ Zero
+            e conheça nossas possibilidades de cooperação.
+          </p>
 
-    <!-- INFORMAÇÕES DE CONTATO -->
+          <div class="contato-assuntos">
 
-    <div class="contact-box reveal">
+            <span>Pesquisa e inovação</span>
+            <span>Projetos socioambientais</span>
+            <span>Cooperação institucional</span>
 
-      <h3>Entre em contato</h3>
+          </div>
 
-      <p>
-        Instituto Nacional de Ciência,
-        Tecnologia e Inovação CO₂ Zero
-      </p>
+        </div>
 
-      <p>
-        Setor Comercial Sul (SCS), Quadra 1<br>
-        Edifício JK, Bloco D, Lote 03<br>
-        Sala 108 — Asa Sul, Brasília/DF
-      </p>
 
-      <a href="tel:+556121079404">
-        (61) 2107-9404 ↗
-      </a>
+        <div class="contact-box reveal">
 
-    </div>
+          <span class="contato-card-etiqueta">
+            CANAIS INSTITUCIONAIS
+          </span>
 
-  </div>
+          <h3>Entre em contato</h3>
 
-</section>
+          <p class="contato-instituicao">
+            Instituto Nacional de Ciência,
+            Tecnologia e Inovação CO₂ Zero
+          </p>
 
-</main>
 
- 
-<!-- =====================================
-     RODAPÉ - PÁGINA INICIAL
-====================================== -->
+          <!-- ENDEREÇO -->
 
-<footer class="site-footer">
+          <div class="contato-info">
 
-  <div class="container">
+            <span class="contato-info-titulo">
+              Localização
+            </span>
 
-    <div class="footer-top">
+            <p>
+              SCS - Setor Comercial Sul - Quadra 1 - Bloco D - Lote 03<br>
+              Edifício JK - Sala 108 - Asa Sul<br>
+              Brasília - DF - CEP: 70306-900
+            </p>
 
-      <!-- LOGO E DESCRIÇÃO -->
+            <a
+              href="https://www.google.com/maps/search/?api=1&amp;query=SCS+Quadra+1+Bloco+D+Lote+03+Edificio+JK+Sala+108+Brasilia+DF"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contato-link">
 
-      <div>
+              Ver localização no mapa ↗
 
-        <img
-          src="assets/img/logo-inct.svg"
-          alt="Logo INCT CO2 Zero"
-          class="footer-logo">
+            </a>
 
-        <p>
-          Ciência, tecnologia e inovação para
-          promover o desenvolvimento sustentável
-          e contribuir para um futuro equilibrado.
-        </p>
+          </div>
+
+
+          <!-- TELEFONE -->
+
+          <div class="contato-info">
+
+            <span class="contato-info-titulo">
+              Telefone
+            </span>
+
+            <a
+              href="tel:+556121079404"
+              class="contato-telefone">
+
+              (61) 2107-9404 ↗
+
+            </a>
+
+          </div>
+
+
+          <!-- E-MAIL -->
+
+          <div class="contato-info">
+
+            <span class="contato-info-titulo">
+              E-mail
+            </span>
+
+            <a
+              href="mailto:contato@inct.org.br"
+              class="contato-link">
+
+              contato@inct.org.br ↗
+
+            </a>
+
+          </div>
+
+
+          <div class="contato-mensagem">
+
+            <p>
+              Estamos abertos ao diálogo e à construção
+              de novas oportunidades de colaboração.
+            </p>
+
+          </div>
+
+        </div>
 
       </div>
 
+    </section>
 
-      <!-- NAVEGAÇÃO -->
+  </main>
 
-      <div>
 
-        <h4>Navegação</h4>
+  <!-- =====================================
+       RODAPÉ - REDES SOCIAIS INCLUÍDAS
+  ====================================== -->
 
-        <div class="footer-links">
+  <footer class="site-footer">
 
-          <a href="#inicio">
-            Início
-          </a>
+    <div class="container">
 
-          <a href="paginas/instituto.html">
-            O Instituto
-          </a>
+      <div class="footer-top">
 
-          <a href="paginas/atuacao.html">
-            Atuação
-          </a>
+        <!-- LOGO E REDES SOCIAIS -->
 
-          <a href="paginas/projetos.html">
-            Projetos
-          </a>
+        <div>
+
+          <img
+            src="assets/img/logo-inct.svg"
+            alt="Logo INCT CO2 Zero"
+            class="footer-logo">
+
+          <p>
+            Ciência, tecnologia e inovação para
+            promover o desenvolvimento sustentável
+            e contribuir para um futuro equilibrado.
+          </p>
+
+          <div class="footer-social">
+
+            <span>
+              Acompanhe nossas redes sociais
+            </span>
+
+            <div class="footer-social-links">
+
+              <!-- INSTAGRAM -->
+
+              <a
+                href="https://www.instagram.com/co2zero_inct/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram do INCT CO2 Zero"
+                title="Instagram">
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true">
+
+                  <rect
+                    x="2" y="2"
+                    width="20" height="20"
+                    rx="5"/>
+
+                  <circle cx="12" cy="12" r="4"/>
+
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="0.8"
+                    fill="currentColor"
+                    stroke="none"/>
+
+                </svg>
+
+              </a>
+
+
+              <!-- LINKEDIN -->
+
+              <a
+                href="https://www.linkedin.com/company/inctco2zero/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn do INCT CO2 Zero"
+                title="LinkedIn">
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true">
+
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.266 2.37 4.266 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+
+                </svg>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <div>
+
+          <h4>Navegação</h4>
+
+          <div class="footer-links">
+
+            <a href="#inicio">
+              Início
+            </a>
+
+            <a href="paginas/instituto.html">
+              O Instituto
+            </a>
+
+            <a href="paginas/atuacao.html">
+              Atuação
+            </a>
+
+            <a href="paginas/projetos.html">
+              Projetos
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- INSTITUCIONAL -->
+
+        <div>
+
+          <h4>Institucional</h4>
+
+          <div class="footer-links">
+
+            <a href="paginas/nit.html">
+              NIT
+            </a>
+
+            <a href="#programa">
+              Pense e Compense
+            </a>
+
+            <a href="#agenda">
+              Agenda 2030
+            </a>
+
+            <a href="#contato">
+              Contato
+            </a>
+
+            <a href="#inicio">
+              Voltar ao topo ↑
+            </a>
+
+          </div>
 
         </div>
 
       </div>
 
 
-      <!-- INSTITUCIONAL -->
+      <!-- PARTE INFERIOR -->
 
-      <div>
+      <div class="footer-bottom">
 
-        <h4>Institucional</h4>
+        <span>
+          © <span id="year"></span>
+          INCT CO₂ Zero.
+          Todos os direitos reservados.
+        </span>
 
-        <div class="footer-links">
-
-          <a href="paginas/nit.html">
-            NIT
-          </a>
-
-          <a href="#programa">
-            Pense e Compense
-          </a>
-
-          <a href="#agenda">
-            Agenda 2030
-          </a>
-
-          <a href="#contato">
-            Contato
-          </a>
-
-          <a href="#inicio">
-            Voltar ao topo ↑
-          </a>
-
-        </div>
+        <span>
+          Ciência • Tecnologia • Sustentabilidade
+        </span>
 
       </div>
 
     </div>
 
-
-    <!-- PARTE INFERIOR DO RODAPÉ -->
-
-    <div class="footer-bottom">
-
-      <span>
-        © <span id="year"></span>
-        INCT CO₂ Zero.
-        Todos os direitos reservados.
-      </span>
-
-      <span>
-        Ciência • Tecnologia • Sustentabilidade
-      </span>
-
-    </div>
-
-  </div>
-
-</footer>
+  </footer>
 
 
   <script src="js/main.js"></script>
+
 </body>
 </html>

@@ -879,3 +879,142 @@ button:focus-visible {
   }
 
 }
+
+/* ==========================================
+   REDES SOCIAIS NO RODAPÉ
+========================================== */
+
+.footer-social {
+  margin-top: 24px;
+}
+
+.footer-social > span {
+  display: block;
+  margin-bottom: 12px;
+  color: #c9d8d3;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 9px;
+
+  color: #9ce8bc;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-social-links a:hover {
+  background: rgba(156, 232, 188, 0.12);
+  transform: translateY(-3px);
+}
+
+.footer-social-links a svg {
+  display: block;
+  width: 19px;
+  height: 19px;
+}
+
+.footer-social-links a:focus-visible {
+  outline: 2px solid #9ce8bc;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   RODAPÉ MAIS COMPACTO - INCT CO2 ZERO
+========================================== */
+
+.site-footer {
+  padding-top: 45px;
+  padding-bottom: 0;
+}
+
+.footer-top {
+  padding-top: 0;
+  padding-bottom: 32px;
+  gap: 35px;
+  align-items: start;
+}
+
+.footer-logo {
+  max-width: 145px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.footer-top p {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.65;
+  font-size: 13px;
+}
+
+.footer-top h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  gap: 10px;
+}
+
+.footer-social {
+  margin-top: 17px;
+}
+
+.footer-social > span {
+  margin-bottom: 9px;
+  font-size: 12px;
+}
+
+.footer-social-links a {
+  width: 36px;
+  height: 36px;
+}
+
+.footer-social-links svg {
+  width: 17px;
+  height: 17px;
+}
+
+.footer-bottom {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  margin-top: 0;
+}
+
+/* AJUSTES PARA CELULAR */
+
+@media (max-width: 768px) {
+
+  .site-footer {
+    padding-top: 35px;
+  }
+
+  .footer-top {
+    gap: 25px;
+    padding-bottom: 25px;
+  }
+
+  .footer-bottom {
+    gap: 10px;
+  }
+
+}

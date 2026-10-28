@@ -2,12 +2,12 @@
 /* ==========================================
    INCT CO2 ZERO
    TODOS OS PROJETOS
-   CATÁLOGO INSTITUCIONAL
+   NOVO PORTFÓLIO INSTITUCIONAL
 ========================================== */
 
 
 /* ==========================================
-   01 - ELEMENTOS GERAIS
+   01 - ETIQUETAS
 ========================================== */
 
 .etiqueta {
@@ -31,98 +31,281 @@
 
 
 /* ==========================================
-   02 - ABERTURA DA PÁGINA
+   02 - NOVA ABERTURA
 ========================================== */
 
 .catalogo-hero {
-  padding: 48px 0 65px;
-  background: #f1f7f3;
-  border-bottom: 1px solid #dce8e1;
+  position: relative;
+  padding: 32px 0 55px;
+
+  background: #0a2435;
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+.catalogo-hero::after {
+  content: "";
+  position: absolute;
+  right: -160px;
+  top: -180px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(41, 143, 109, 0.16),
+    transparent 67%
+  );
+
+  pointer-events: none;
 }
 
 .catalogo-hero .voltar {
+  position: relative;
+  z-index: 1;
+
   display: inline-flex;
   align-items: center;
 
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 
-  color: var(--green);
-  font-size: 13px;
+  color: #a5e8c2;
+  font-size: 12px;
   font-weight: 700;
   text-decoration: none;
-  transition: opacity .25s;
+  transition: color 0.25s;
 }
 
 .catalogo-hero .voltar:hover {
-  opacity: .7;
+  color: #ffffff;
+}
+
+
+/* GRID DA ABERTURA */
+
+.catalogo-hero-grid {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: center;
+  gap: 45px;
 }
 
 .catalogo-hero .etiqueta {
-  display: flex;
-  width: fit-content;
+  color: #99e4bb;
 }
 
 .catalogo-hero h1 {
-  margin: 20px 0;
-  color: var(--navy);
+  max-width: 840px;
+  margin: 18px 0 17px;
 
-  font-family: 'Manrope', sans-serif;
-  font-size: clamp(38px, 4.5vw, 60px);
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(35px, 4.2vw, 56px);
   font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -2px;
+  letter-spacing: -1.8px;
+  line-height: 1.16;
 }
 
 .catalogo-hero h1 em {
-  color: var(--green);
+  color: #92e1b4;
   font-style: normal;
 }
 
-.catalogo-hero p {
-  max-width: 680px;
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.85;
-}
+.catalogo-hero-conteudo > p {
+  max-width: 600px;
+  margin: 0;
 
-
-/* ==========================================
-   03 - CONTEÚDO DO CATÁLOGO
-========================================== */
-
-.catalogo-conteudo {
-  padding: 80px 0 100px;
-  background: #fff;
-}
-
-.catalogo-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 35px;
-  margin-bottom: 38px;
-}
-
-.catalogo-heading h2 {
-  margin-top: 16px;
-
-  color: var(--navy);
-  font-family: 'Manrope', sans-serif;
-  font-size: clamp(28px, 3.5vw, 44px);
-  line-height: 1.2;
-  letter-spacing: -1.5px;
-}
-
-.catalogo-heading > p {
-  max-width: 370px;
-  color: var(--muted);
+  color: #bdced8;
   font-size: 14px;
   line-height: 1.8;
 }
 
 
+/* TEMAS */
+
+.catalogo-hero-temas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 25px;
+}
+
+.catalogo-hero-temas span {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 8px 12px;
+  border: 1px solid rgba(171, 229, 196, 0.3);
+  border-radius: 30px;
+
+  color: #ccebdd;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
 /* ==========================================
-   04 - ORGANIZAÇÃO DOS PROJETOS
+   03 - ELEMENTO VISUAL DA ABERTURA
+========================================== */
+
+.catalogo-hero-visual {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 260px;
+  min-width: 0;
+}
+
+.catalogo-visual-circulo {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle at 35% 25%,
+    #1d625b,
+    #0c3845 75%
+  );
+
+  border: 1px solid rgba(151, 230, 186, 0.45);
+
+  box-shadow:
+    0 0 0 20px rgba(144, 224, 184, 0.035),
+    0 0 0 45px rgba(144, 224, 184, 0.025);
+}
+
+.catalogo-visual-circulo span {
+  color: #b0e7c9;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.catalogo-visual-circulo strong {
+  color: #ffffff;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 66px;
+  font-weight: 800;
+  letter-spacing: -4px;
+  line-height: 1.25;
+}
+
+.catalogo-visual-detalhe {
+  position: absolute;
+  border-radius: 50%;
+  background: #9ae3ba;
+}
+
+.detalhe-1 {
+  width: 9px;
+  height: 9px;
+  top: 18px;
+  right: 45px;
+}
+
+.detalhe-2 {
+  width: 6px;
+  height: 6px;
+  bottom: 45px;
+  left: 15px;
+}
+
+.catalogo-visual-legenda {
+  position: absolute;
+  bottom: 0;
+
+  color: #7fbba8;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+
+/* ==========================================
+   04 - CONTEÚDO DO CATÁLOGO
+========================================== */
+
+.catalogo-conteudo {
+  padding: 52px 0 90px;
+  background: #ffffff;
+}
+
+
+/* CABEÇALHO COMPACTO */
+
+.catalogo-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  padding-bottom: 23px;
+  margin-bottom: 25px;
+
+  border-bottom: 1px solid #dde8e1;
+}
+
+.catalogo-heading .etiqueta {
+  font-size: 10px;
+}
+
+.catalogo-heading-intro {
+  max-width: 680px;
+  margin: 13px 0 0;
+
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+
+/* CONTADOR DE PROJETOS */
+
+.catalogo-total {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.catalogo-total strong {
+  font-family: "Manrope", sans-serif;
+  color: #198961;
+  font-size: 37px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.catalogo-total span {
+  max-width: 100px;
+  color: #627984;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+
+/* ==========================================
+   05 - ORGANIZAÇÃO DOS PROJETOS
 ========================================== */
 
 .catalogo-lista {
@@ -133,7 +316,7 @@
 
 
 /* ==========================================
-   05 - CARDS CLICÁVEIS
+   06 - CARDS CLICÁVEIS
 ========================================== */
 
 .catalogo-item {
@@ -144,7 +327,7 @@
   min-width: 0;
   min-height: 225px;
 
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #dce8e1;
   border-radius: 9px;
   overflow: hidden;
@@ -171,7 +354,7 @@
 
 
 /* ==========================================
-   06 - IMAGENS DOS CARDS
+   07 - IMAGENS DOS PROJETOS
 ========================================== */
 
 .catalogo-thumb {
@@ -197,7 +380,7 @@
 }
 
 
-/* ILUSTRAÇÃO PARA PROJETOS SEM FOTO */
+/* ESTILO PARA PROJETOS SEM FOTO */
 
 .mini-grafico {
   display: flex;
@@ -212,6 +395,7 @@
   text-align: center;
 
   color: #a4ebc7;
+
   background:
     radial-gradient(
       circle at 75% 15%,
@@ -224,7 +408,7 @@
       #135c4c
     );
 
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 15px;
   font-weight: 800;
   letter-spacing: 1.5px;
@@ -233,20 +417,20 @@
 
 
 /* ==========================================
-   07 - TEXTOS DOS CARDS
+   08 - TEXTOS DOS CARDS
 ========================================== */
 
 .catalogo-descricao {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
   padding: 22px;
   min-width: 0;
 }
 
 .catalogo-classificacao {
   display: block;
-
   margin-bottom: 11px;
 
   color: var(--green);
@@ -260,7 +444,7 @@
   margin: 0 0 12px;
 
   color: var(--navy);
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: clamp(17px, 1.55vw, 21px);
   font-weight: 800;
   letter-spacing: -.5px;
@@ -277,7 +461,7 @@
 
 
 /* ==========================================
-   08 - BOTÃO CONHECER PROJETO
+   09 - BOTÃO CONHECER PROJETO
 ========================================== */
 
 .catalogo-saiba {
@@ -305,7 +489,7 @@
 
 
 /* ==========================================
-   09 - TELAS MÉDIAS
+   10 - TELAS MÉDIAS
 ========================================== */
 
 @media (max-width: 1100px) {
@@ -332,19 +516,27 @@
   .catalogo-descricao h3 {
     font-size: 21px;
   }
+
 }
 
 
 /* ==========================================
-   10 - TABLETS
+   11 - TABLETS
 ========================================== */
 
 @media (max-width: 800px) {
 
+  .catalogo-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .catalogo-hero-visual {
+    display: none;
+  }
+
   .catalogo-heading {
-    flex-direction: column;
     align-items: flex-start;
-    gap: 14px;
   }
 
   .catalogo-item {
@@ -356,19 +548,20 @@
   }
 
   .catalogo-conteudo {
-    padding: 65px 0;
+    padding: 55px 0 70px;
   }
+
 }
 
 
 /* ==========================================
-   11 - CELULARES
+   12 - CELULARES
 ========================================== */
 
 @media (max-width: 600px) {
 
   .catalogo-hero {
-    padding: 35px 0 50px;
+    padding: 30px 0 43px;
   }
 
   .catalogo-hero .voltar {
@@ -376,24 +569,40 @@
   }
 
   .catalogo-hero h1 {
-    font-size: 39px;
-    letter-spacing: -1.4px;
+    font-size: 36px;
+    letter-spacing: -1.1px;
   }
 
-  .catalogo-hero p {
-    font-size: 14px;
+  .catalogo-hero-conteudo > p {
+    font-size: 13px;
     line-height: 1.75;
   }
 
+  .catalogo-hero-temas {
+    gap: 7px;
+  }
+
+  .catalogo-hero-temas span {
+    font-size: 10px;
+    padding: 7px 10px;
+  }
+
   .catalogo-conteudo {
-    padding: 55px 0;
+    padding: 40px 0 60px;
   }
 
   .catalogo-heading {
-    margin-bottom: 28px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
   }
 
-  .catalogo-heading h2 {
+  .catalogo-heading-intro {
+    font-size: 13px;
+  }
+
+  .catalogo-total strong {
     font-size: 30px;
   }
 
@@ -432,11 +641,12 @@
   .catalogo-saiba {
     margin-top: 5px;
   }
+
 }
 
 
 /* ==========================================
-   12 - ACESSIBILIDADE
+   13 - ACESSIBILIDADE
 ========================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -452,4 +662,102 @@
   .catalogo-item:hover .catalogo-saiba b {
     transform: none;
   }
+
 }
+/* ==========================================
+   PORTFÓLIO - ABERTURA MAIS COMPACTA
+========================================== */
+
+/* Reduz a altura geral da abertura */
+.catalogo-hero {
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+
+/* Aproxima o botão voltar do conteúdo */
+.catalogo-hero .voltar {
+  margin-bottom: 18px;
+}
+
+/* Reduz o espaço entre as duas colunas */
+.catalogo-hero-grid {
+  gap: 30px;
+}
+
+/* Diminui o título */
+.catalogo-hero h1 {
+  max-width: 750px;
+  font-size: clamp(32px, 3.5vw, 47px);
+  line-height: 1.13;
+  margin: 13px 0 13px;
+}
+
+/* Descrição mais próxima do título */
+.catalogo-hero-conteudo > p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Aproxima as etiquetas */
+.catalogo-hero-temas {
+  margin-top: 17px;
+}
+
+/* Reduz os círculos */
+.catalogo-hero-visual {
+  height: 205px;
+}
+
+.catalogo-visual-circulo {
+  width: 165px;
+  height: 165px;
+}
+
+.catalogo-visual-circulo strong {
+  font-size: 49px;
+}
+
+.catalogo-visual-circulo span {
+  font-size: 9px;
+}
+
+/* Aproxima o catálogo da abertura */
+.catalogo-conteudo {
+  padding-top: 38px;
+}
+
+/* TABLETS */
+@media (max-width: 800px) {
+  .catalogo-hero {
+    padding: 28px 0 35px;
+  }
+
+  .catalogo-hero h1 {
+    font-size: clamp(32px, 5vw, 43px);
+  }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+  .catalogo-hero {
+    padding: 24px 0 30px;
+  }
+
+  .catalogo-hero .voltar {
+    margin-bottom: 18px;
+  }
+
+  .catalogo-hero h1 {
+    font-size: 33px;
+    letter-spacing: -1px;
+  }
+
+  .catalogo-hero-temas {
+    margin-top: 15px;
+  }
+
+  .catalogo-conteudo {
+    padding-top: 32px;
+  }
+}
+

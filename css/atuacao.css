@@ -1,408 +1,764 @@
 
 /* ==========================================
    INCT CO2 ZERO
-   ÁREAS DE ATUAÇÃO
+   PÁGINA ATUAÇÃO - VERSÃO INTERATIVA
+
+   Não modifica cabeçalho ou rodapé.
 ========================================== */
 
 
-/* ==========================================
-   ELEMENTOS GERAIS
-========================================== */
+/* CONFIGURAÇÕES DA PÁGINA */
 
-.atuacao-etiqueta {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
+.atuacao-lab-hero,
+.atuacao-explorador,
+.atuacao-processo,
+.atuacao-entregas,
+.atuacao-cta {
+  box-sizing: border-box;
+}
 
-  color: var(--green);
+.atuacao-lab-hero *,
+.atuacao-explorador *,
+.atuacao-processo *,
+.atuacao-entregas *,
+.atuacao-cta * {
+  box-sizing: border-box;
+}
+
+.atuacao-lab-hero h1,
+.atuacao-explorador h2,
+.atuacao-processo h2,
+.atuacao-entregas h2,
+.atuacao-cta h2 {
+  font-family: "Manrope", sans-serif;
+  letter-spacing: -1.7px;
+  line-height: 1.16;
+}
+
+.atuacao-label,
+.atuacao-lab-kicker {
+  color: #12845e;
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.7px;
   text-transform: uppercase;
 }
 
-.atuacao-etiqueta::before {
-  content: "";
-  width: 24px;
-  height: 1px;
-  background: currentColor;
-}
-
-.atuacao-etiqueta.clara {
-  color: #9be9bc;
-}
-
-.atuacao-abertura h1,
-.atuacao-cabecalho h2,
-.atuacao-aplicacoes h2,
-.atuacao-final h2 {
-  font-family: "Manrope", sans-serif;
-  letter-spacing: -2px;
-  line-height: 1.18;
-}
-
-.atuacao-abertura em,
-.atuacao-cabecalho em,
-.atuacao-aplicacoes em,
-.atuacao-final em {
-  font-style: normal;
-  color: var(--green);
+.atuacao-label-light {
+  color: #9ae7bd;
 }
 
 
 /* ==========================================
-   01 - ABERTURA
+   01 - ABERTURA TECNOLÓGICA
 ========================================== */
 
-.atuacao-abertura {
-  padding: 65px 0;
-  background: #f1f7f3;
-  border-bottom: 1px solid #dce8e1;
+.atuacao-lab-hero {
+  background: #081d2e;
+  color: #ffffff;
+  overflow: hidden;
 }
 
-.atuacao-abertura-grid {
+.atuacao-lab-hero-inner {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 80px;
-  align-items: end;
-}
-
-.atuacao-abertura h1 {
-  max-width: 720px;
-  margin-top: 20px;
-  color: var(--navy);
-  font-size: clamp(39px, 4.5vw, 60px);
-}
-
-.atuacao-abertura-grid > p {
-  max-width: 400px;
-  padding-bottom: 5px;
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.85;
-}
-
-
-/* ==========================================
-   02 - ESPECIALIDADES
-========================================== */
-
-.atuacao-especialidades {
-  padding: 95px 0 105px;
-  background: #ffffff;
-}
-
-.atuacao-cabecalho {
-  max-width: 730px;
-  margin-bottom: 50px;
-}
-
-.atuacao-cabecalho h2 {
-  margin: 20px 0 15px;
-  color: var(--navy);
-  font-size: clamp(32px, 3.8vw, 48px);
-}
-
-.atuacao-cabecalho > p {
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.85;
-}
-
-.atuacao-lista {
-  border-top: 1px solid var(--border);
-}
-
-.atuacao-item {
-  display: grid;
-  grid-template-columns: 55px 1fr 1fr;
-  gap: 30px;
-  align-items: start;
-
-  padding: 28px 0;
-  border-bottom: 1px solid var(--border);
-
-  transition: padding-left 0.25s ease;
-}
-
-.atuacao-item:hover {
-  padding-left: 12px;
-}
-
-.atuacao-numero {
-  color: var(--green);
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.atuacao-item-titulo > span {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--green);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1.25px;
-}
-
-.atuacao-item h3 {
-  max-width: 430px;
-  color: var(--navy);
-  font-size: clamp(20px, 2.3vw, 27px);
-  letter-spacing: -0.7px;
-  line-height: 1.3;
-}
-
-.atuacao-item-texto p {
-  max-width: 505px;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.85;
-}
-
-
-/* ==========================================
-   LINK DO NIT
-========================================== */
-
-.atuacao-link-nit {
-  display: inline-flex;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 45px;
   align-items: center;
-  gap: 12px;
-  margin-top: 14px;
 
-  color: var(--green);
+  min-height: 510px;
+  padding-top: 62px;
+  padding-bottom: 62px;
+}
+
+.atuacao-lab-kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #a0e8c1;
+}
+
+.atuacao-dot {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #73d7a0;
+}
+
+.atuacao-lab-copy h1 {
+  margin: 25px 0 19px;
+  max-width: 740px;
+
+  font-size: clamp(39px, 4.5vw, 65px);
+  color: #ffffff;
+}
+
+.atuacao-lab-copy h1 span {
+  color: #91e2b7;
+}
+
+.atuacao-lab-copy > p {
+  max-width: 570px;
+  margin: 0;
+  color: #c6d8dc;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+
+/* BOTÕES DA ABERTURA */
+
+.atuacao-lab-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 23px;
+  margin-top: 28px;
+}
+
+.atuacao-lab-primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+
+  padding: 14px 20px;
+  border-radius: 5px;
+
+  background: #1b8c65;
+  color: #ffffff;
+
   font-size: 13px;
   font-weight: 800;
   text-decoration: none;
+
+  transition:
+    background 0.2s,
+    transform 0.2s;
 }
 
-.atuacao-link-nit:hover {
+.atuacao-lab-primary:hover {
+  background: #116e4f;
+  transform: translateY(-2px);
+}
+
+.atuacao-lab-text-link {
+  color: #b4e7cb;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.atuacao-lab-text-link:hover {
   text-decoration: underline;
 }
 
 
-/* ==========================================
-   03 - APLICAÇÕES TÉCNICAS
-========================================== */
+/* ETIQUETAS */
 
-.atuacao-aplicacoes {
-  padding: 95px 0 105px;
+.atuacao-lab-tags {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+.atuacao-lab-tags span {
+  border: 1px solid rgba(195, 238, 212, 0.3);
+  border-radius: 30px;
+  padding: 7px 12px;
+  color: #c7e8d8;
+  font-size: 11px;
+}
+
+
+/* ILUSTRAÇÃO DE CONEXÕES */
+
+.atuacao-network {
+  position: relative;
+  min-width: 0;
+  min-height: 390px;
+
+  border: 1px solid rgba(173, 230, 205, 0.17);
+  border-radius: 9px;
 
   background:
     radial-gradient(
-      circle at 85% 10%,
-      rgba(37, 153, 113, 0.17),
-      transparent 42%
-    ),
-    #091e31;
+      circle at 50% 45%,
+      #174d4e,
+      #0b2c3b 60%,
+      #0b2635
+    );
 
-  color: #ffffff;
+  padding: 21px;
+  overflow: hidden;
 }
 
-.atuacao-aplicacoes-topo {
-  max-width: 780px;
-  margin-bottom: 47px;
+.atuacao-network-label {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+
+  color: #9bd8be;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
 }
 
-.atuacao-aplicacoes h2 {
-  margin: 21px 0;
-  color: #ffffff;
-  font-size: clamp(32px, 3.7vw, 49px);
+.atuacao-network svg {
+  display: block;
+  width: 100%;
+  height: 315px;
+  margin-top: 25px;
 }
 
-.atuacao-aplicacoes h2 em {
-  color: #9be9bc;
+.atuacao-network-bottom {
+  color: #91c9b4;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-align: center;
 }
 
-.atuacao-aplicacoes-topo > p {
-  max-width: 660px;
-  color: #c0d2da;
+.atuacao-network-bottom span {
+  color: #6dbb9a;
+  padding: 0 5px;
+}
+
+
+/* ==========================================
+   02 - EXPLORADOR INTERATIVO
+========================================== */
+
+.atuacao-explorador {
+  background: #f6f9f7;
+  padding: 78px 0 85px;
+}
+
+.atuacao-explorador-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 45px;
+  margin-bottom: 30px;
+}
+
+.atuacao-explorador-heading h2,
+.atuacao-entregas h2,
+.atuacao-cta h2 {
+  font-size: clamp(32px, 3.6vw, 47px);
+  color: #0b283b;
+  margin: 16px 0 0;
+}
+
+.atuacao-explorador-heading h2 em,
+.atuacao-entregas h2 em,
+.atuacao-cta h2 em {
+  font-style: normal;
+  color: #208a65;
+}
+
+.atuacao-explorador-heading > p {
+  max-width: 360px;
   font-size: 14px;
-  line-height: 1.9;
+  line-height: 1.75;
+  color: #587180;
+  margin: 0;
 }
 
-.atuacao-aplicacoes-grid {
+
+/* LAYOUT DO EXPLORADOR */
+
+.atuacao-explorador-layout {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 22px;
 }
 
-.atuacao-aplicacao {
-  padding: 24px 0 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.27);
+
+/* BOTÕES DAS ÁREAS */
+
+.atuacao-tab-list {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #dae7df;
+  border-radius: 8px;
+  overflow: hidden;
+
+  background: #ffffff;
 }
 
-.atuacao-aplicacao > span {
-  color: #9be9bc;
+.atuacao-tab {
+  display: grid;
+  grid-template-columns: 40px 1fr 20px;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  padding: 19px 20px;
+
+  border: 0;
+  border-bottom: 1px solid #e2ebe5;
+
+  background: transparent;
+  color: #15384a;
+
+  text-align: left;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.atuacao-tab:last-child {
+  border-bottom: 0;
+}
+
+.atuacao-tab:hover {
+  background: #edf6f1;
+}
+
+.atuacao-tab[aria-selected="true"] {
+  background: #e0f1e8;
+  color: #0b6548;
+  box-shadow: inset 4px 0 #16845b;
+}
+
+.atuacao-tab-num {
+  color: #268764;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.atuacao-tab > span:last-child {
+  text-align: right;
+  color: #258664;
+}
+
+
+/* PAINEL DE INFORMAÇÕES */
+
+.atuacao-painel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 460px;
+
+  background: #0a2939;
+  color: #ffffff;
+
+  border-radius: 8px;
+  padding: 35px;
+
+  box-shadow:
+    0 15px 35px rgba(13, 51, 47, 0.09);
+}
+
+.atuacao-painel-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #a0dfbb;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.atuacao-painel-glyph {
+  font-size: 42px;
+  color: #6bbf9e;
+}
+
+.atuacao-painel-categoria {
+  color: #9ee2bb;
+  letter-spacing: 1.5px;
+  font-size: 11px;
+  font-weight: 800;
+  margin: 0 0 14px;
+}
+
+.atuacao-painel h3 {
+  color: #ffffff;
+  font-size: clamp(26px, 2.9vw, 38px);
+  letter-spacing: -1px;
+  line-height: 1.22;
+  margin: 0 0 18px;
+}
+
+.atuacao-painel-content > p:last-child {
+  color: #c6d7db;
+  font-size: 15px;
+  line-height: 1.85;
+  max-width: 500px;
+  margin: 0;
+}
+
+
+/* LINK DO PAINEL */
+
+.atuacao-painel-rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.18);
+
+  padding-top: 19px;
+  margin-top: 25px;
+}
+
+.atuacao-painel-rodape > span {
+  color: #83bda8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.atuacao-painel-rodape a {
+  color: #b0efd1;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.atuacao-painel-rodape a:hover {
+  text-decoration: underline;
+}
+
+.atuacao-tab-hint {
+  color: #708593;
+  font-size: 11px;
+  margin: 14px 0 0;
+}
+
+
+/* ==========================================
+   03 - PROCESSO CONCEITUAL
+========================================== */
+
+.atuacao-processo {
+  background: #092033;
+  color: #ffffff;
+  padding: 73px 0 86px;
+}
+
+.atuacao-processo-header {
+  max-width: 730px;
+}
+
+.atuacao-processo-header h2 {
+  color: #ffffff;
+  font-size: clamp(32px, 3.8vw, 48px);
+  margin: 17px 0;
+}
+
+.atuacao-processo-header h2 em {
+  color: #9ce4ba;
+  font-style: normal;
+}
+
+.atuacao-processo-header > p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: #bdcfd7;
+  margin: 0;
+}
+
+
+/* ETAPAS */
+
+.atuacao-processo-trilha {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.atuacao-etapa {
+  border-top: 2px solid #4c9d81;
+  padding: 22px 8px 0 0;
+}
+
+.atuacao-etapa > span {
+  color: #9de4be;
   font-size: 12px;
   font-weight: 800;
 }
 
-.atuacao-aplicacao h3 {
-  margin: 25px 0 13px;
+.atuacao-etapa h3 {
+  font-size: 21px;
   color: #ffffff;
-  font-size: 19px;
-  line-height: 1.35;
+  margin: 25px 0 9px;
 }
 
-.atuacao-aplicacao p {
-  color: #c0d2da;
+.atuacao-etapa p {
   font-size: 13px;
-  line-height: 1.85;
+  line-height: 1.75;
+  color: #bacdd5;
+  margin: 0;
 }
 
 
 /* ==========================================
-   04 - CONTATO
+   04 - APLICAÇÕES TÉCNICAS
 ========================================== */
 
-.atuacao-final {
-  padding: 85px 0;
-  background: #eef6f1;
+.atuacao-entregas {
+  background: #ffffff;
+  padding: 80px 0 86px;
 }
 
-.atuacao-final-grid {
+.atuacao-entregas-layout {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 85px;
-  align-items: center;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 75px;
 }
 
-.atuacao-final h2 {
-  margin-top: 22px;
-  color: var(--navy);
-  font-size: clamp(30px, 3.4vw, 45px);
-}
-
-.atuacao-final-acao p {
+.atuacao-entregas-intro > p {
+  color: #637b86;
+  font-size: 14px;
+  line-height: 1.8;
   max-width: 430px;
-  margin-bottom: 25px;
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.85;
+  margin: 19px 0 0;
 }
 
-.atuacao-botao {
-  display: inline-flex;
-  align-items: center;
-  gap: 30px;
 
-  padding: 16px 23px;
-  border-radius: 5px;
+/* LISTA DE APLICAÇÕES */
 
-  background: var(--green);
-  color: #ffffff;
+.atuacao-entregas-lista > div {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 8px 15px;
 
-  font-size: 13px;
+  padding: 18px 0;
+  border-top: 1px solid #dce7e0;
+}
+
+.atuacao-entregas-lista > div:last-child {
+  border-bottom: 1px solid #dce7e0;
+}
+
+.atuacao-entregas-lista > div > span {
+  grid-row: span 2;
+
+  color: #14845c;
+  font-size: 12px;
   font-weight: 800;
-  text-decoration: none;
-
-  transition: background 0.25s ease;
+  padding-top: 3px;
 }
 
-.atuacao-botao:hover {
-  background: var(--green-dark);
+.atuacao-entregas-lista h3 {
+  font-size: 19px;
+  color: #14384c;
+  margin: 0;
 }
 
-
-/* ==========================================
-   RESPONSIVIDADE - TABLETS
-========================================== */
-
-@media (max-width: 1000px) {
-
-  .atuacao-abertura-grid,
-  .atuacao-final-grid {
-    gap: 45px;
-  }
-
-  .atuacao-aplicacoes-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+.atuacao-entregas-lista p {
+  font-size: 13px;
+  line-height: 1.75;
+  color: #607985;
+  margin: 0;
 }
 
 
 /* ==========================================
-   RESPONSIVIDADE - TELAS MENORES
+   05 - COOPERAÇÃO INSTITUCIONAL
 ========================================== */
 
-@media (max-width: 800px) {
+.atuacao-cta {
+  background: #ecf5ee;
+  padding: 68px 0;
+}
 
-  .atuacao-abertura-grid,
-  .atuacao-final-grid {
+.atuacao-cta-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.atuacao-cta-inner > div:last-child p {
+  max-width: 430px;
+  font-size: 14px;
+  line-height: 1.85;
+  color: #56707d;
+  margin: 0 0 23px;
+}
+
+
+/* ==========================================
+   ACESSIBILIDADE
+========================================== */
+
+.atuacao-tab:focus-visible,
+.atuacao-lab-hero a:focus-visible,
+.atuacao-painel a:focus-visible,
+.atuacao-cta a:focus-visible {
+  outline: 3px solid #47ba89;
+  outline-offset: 3px;
+}
+
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 950px) {
+
+  .atuacao-lab-hero-inner {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .atuacao-network {
+    min-height: 300px;
+  }
+
+  .atuacao-network svg {
+    height: 245px;
+  }
+
+  .atuacao-entregas-layout {
+    gap: 35px;
+  }
+
+}
+
+
+/* ==========================================
+   TELAS MENORES
+========================================== */
+
+@media (max-width: 760px) {
+
+  .atuacao-explorador-heading {
+    display: block;
+  }
+
+  .atuacao-explorador-heading > p {
+    margin-top: 15px;
+  }
+
+  .atuacao-explorador-layout,
+  .atuacao-entregas-layout,
+  .atuacao-cta-inner {
     grid-template-columns: 1fr;
   }
 
-  .atuacao-item {
-    grid-template-columns: 40px 1fr;
-    gap: 12px 20px;
+  .atuacao-processo-trilha {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
-  .atuacao-item-texto {
-    grid-column: 2;
+  .atuacao-painel {
+    min-height: 335px;
   }
 
-  .atuacao-item:hover {
-    padding-left: 0;
+  .atuacao-cta-inner {
+    gap: 20px;
   }
 
 }
 
 
 /* ==========================================
-   RESPONSIVIDADE - CELULARES
+   CELULARES
 ========================================== */
 
-@media (max-width: 600px) {
+@media (max-width: 540px) {
 
-  .atuacao-abertura {
-    padding: 50px 0 55px;
+  .atuacao-lab-hero-inner {
+    padding-top: 47px;
+    padding-bottom: 52px;
+    gap: 30px;
   }
 
-  .atuacao-abertura h1 {
+  .atuacao-lab-copy h1 {
     font-size: 39px;
-    letter-spacing: -1.4px;
+    letter-spacing: -1.1px;
   }
 
-  .atuacao-abertura-grid > p {
-    font-size: 14px;
+  .atuacao-network {
+    min-height: 230px;
+    padding: 12px;
   }
 
-  .atuacao-especialidades,
-  .atuacao-aplicacoes {
-    padding: 75px 0;
+  .atuacao-network svg {
+    height: 210px;
   }
 
-  .atuacao-final {
-    padding: 70px 0;
+  .atuacao-network-label {
+    font-size: 8px;
+    left: 14px;
   }
 
-  .atuacao-cabecalho {
-    margin-bottom: 35px;
+  .atuacao-network-bottom {
+    font-size: 8px;
   }
 
-  .atuacao-item {
-    padding: 24px 0;
+  .atuacao-explorador,
+  .atuacao-processo,
+  .atuacao-entregas,
+  .atuacao-cta {
+    padding-top: 55px;
+    padding-bottom: 58px;
   }
 
-  .atuacao-item h3 {
-    font-size: 21px;
+  .atuacao-tab {
+    padding: 14px 12px;
+    font-size: 12px;
+
+    grid-template-columns:
+      27px 1fr 16px;
   }
 
-  .atuacao-aplicacoes-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
+  .atuacao-painel {
+    padding: 24px;
+    min-height: 360px;
   }
 
-  .atuacao-aplicacao {
-    padding: 23px 0;
+  .atuacao-painel-rodape {
+    align-items: start;
+    flex-direction: column;
   }
 
-  .atuacao-cabecalho h2,
-  .atuacao-aplicacoes h2,
-  .atuacao-final h2 {
-    letter-spacing: -1.2px;
+  .atuacao-processo-trilha {
+    gap: 16px;
+  }
+
+  .atuacao-etapa h3 {
+    font-size: 18px;
+  }
+
+  .atuacao-etapa p {
+    font-size: 12px;
+  }
+
+  .atuacao-lab-tags {
+    margin-top: 23px;
+  }
+
+}
+
+
+/* ==========================================
+   MOVIMENTO REDUZIDO
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .atuacao-tab,
+  .atuacao-lab-primary {
+    transition: none;
   }
 
 }

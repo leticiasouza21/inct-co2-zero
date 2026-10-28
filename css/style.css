@@ -1018,30 +1018,3 @@ button:focus-visible {
   }
 
 }
-
-/* CORREÇÃO DO TAMANHO DOS ÍCONES SOCIAIS */
-
-.site-footer .footer-social-links {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.site-footer .footer-social-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  flex: 0 0 36px;
-}
-
-.site-footer .footer-social-links a svg {
-  display: block;
-  width: 18px !important;
-  height: 18px !important;
-  min-width: 18px;
-  max-width: 18px;
-  min-height: 18px;
-  max-height: 18px;
-}
